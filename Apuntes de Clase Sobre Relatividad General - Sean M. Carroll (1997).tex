@@ -16,11 +16,11 @@
 \usepackage[usenames]{color}
 \definecolor{AzulEnlace}{rgb}{0.000,0.078,0.518}
 \definecolor{GrisAzul}{RGB}{10,10,40}
-
 \definecolor{OcreA}{rgb}{0.941, 0.906, 0.800}
 \definecolor{OcreB}{rgb}{0.984, 0.969, 0.965}
 \definecolor{OcreC}{rgb}{0.980, 0.965, 0.918}
 \definecolor{OcreD}{rgb}{0.996, 0.973, 0.902}
+
 
 % -----------------------------------------------------------------------
 \usepackage{float}
@@ -57,9 +57,6 @@
 \usepackage{colortbl}
 \usepackage{xcolor}
 \usepackage{mdframed}
-%\colorlet{shadecolor}{orange!15}
-%\definecolor{RojoLadrillo}{RGB}{148,49,43}
-%\definecolor{VerdeDifuso}{rgb}{0.698, 1.0, 0.698}
 
 \newmdenv[linewidth = 0pt,
 leftmargin = -5,
@@ -84,13 +81,10 @@ footnoteinside = false,]{CajaColor}
 \newcommand{\mn}{{\mu\nu}}
 \newcommand{\e}[1]{\hat{e}_{(#1)}}
 
-\let\t\relax
-%\newcommand{\t}[1]{{\hat{\theta}}^{(#1)}}
 \newcommand{\ztheta}[1]{{\hat{\theta}}^{(#1)}}
 \newcommand{\p}[1]{{\partial_{#1}}}
 \newcommand{\R}{\mathbb{R}}
 
-%\def\d{{\rm d}}
 \def\g{{\sqrt{-g}}}
 \def\lie{\pounds}
 \def\bh{{\bar h}}
@@ -107,6 +101,8 @@ footnoteinside = false,]{CajaColor}
 \hypersetup{colorlinks=true,breaklinks=true,citecolor=AzulEnlace,linkcolor=AzulEnlace,filecolor=AzulEnlace,urlcolor=AzulEnlace}
 
 % -----------------------------------------------------------------------
+
+% Apuntes de Clase sobre Relatividad General
 
 \title{\textcolor{GrisAzul}{{\Huge \textbf{Apuntes de Clase sobre\\[6mm] Relatividad General}}}}
 
@@ -125,12 +121,6 @@ Los capítulos individuales y las versiones potencialmente actualizadas se puede
 
 
 \begin{document}
-
-%\thispagestyle{plain}
-
-
-\noindent
-%w{{NSF-ITP/97-147}\hfill{gr-qc/9712019}}
 
 % -----------------------------------------------------------------------------------------
 \thispagestyle{plain}
@@ -173,8 +163,13 @@ Se asumió que por la acción intencional de envío y páginas de ayuda que esta
 14/08/1991 - Primer envío a arXiv (luego recién hep-th) realizado (hep-th/9108001)\\
 21/06/2007 - Esta página HTML se creó 16/12/2008 - Agregar URI para esta licencia explícitamente
 }
+
+\textbf{Puede descargar este archivo y contribuir en su mejora de Edición y Diagramación. }
+
+Github Proyecto LaTeX: \href{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/blob/main/Apuntes%20de%20Clase%20Sobre%20Relatividad%20General%20-%20Sean%20M.%20Carroll%20(1997).tex}{Apuntes de Clase sobre Relatividad General.tex}
 \end{quote}
-%\newpage
+
+
 
 {\normalfont\fontsize{9.4pt}{1em}\selectfont
     \thispagestyle{plain}
@@ -184,7 +179,9 @@ Se asumió que por la acción intencional de envío y páginas de ayuda que esta
     \end{quote}
     \normalfont\selectfont}
 
+
 \mainmatter
+
 
 \chapter*{Prólogo}
 \addcontentsline{toc}{chapter}{Prólogo}
@@ -222,7 +219,6 @@ Contrato del Departamento de Energía no. DE-AC02-76ER03069 y subvenciones de la
 %\newpage
 
 \chapter{Relatividad Especial y Espacio-Tiempo Plano}
-%\addcontentsline{toc}{chapter}{Relatividad Especial y Espacio-Tiempo Plano}
 
 Comenzaremos con un recorrido relámpago por la Relatividad Especial y la vida en el Espacio-Tiempo plano.
 El punto será recordar de qué se trata Relatividad Especial e introducir tensores y conceptos relacionados que serán cruciales más adelante, sin las complicaciones adicionales de la curvatura además de todo lo demás.
@@ -1308,7 +1304,7 @@ Aunque no existe una respuesta ``correcta'', es una cuestión importante desde e
 
 
 \chapter{Colectores}
-%\addcontentsline{toc}{chapter}{Colectores}
+
 
 Después de la invención de la Relatividad Especial, Einstein intentó durante varios años inventar una teoría de la gravedad invariante de Lorentz, sin éxito.
 Su eventual avance fue reemplazar el Espacio-Tiempo de Minkowski con un Espacio-Tiempo curvo, donde la curvatura era creada por (y reaccionaba contra) la energía y el momentum.
@@ -2077,7 +2073,7 @@ Puede convencerse de que entre los diferentes casos especiales de este teorema s
 
 
 \chapter{Curvatura}
-%\addcontentsline{toc}{chapter}{Curvatura}
+
 
 
 En nuestra discusión sobre las variedades, quedó claro que había varias nociones de las que podíamos hablar tan pronto como se definiera la variedad; podríamos definir funciones, tomar sus derivadas, considerar caminos parametrizados, configurar tensores, etc.
@@ -3689,7 +3685,7 @@ Se debe apreciar la relación entre los distintos usos de la noción de conexió
 
 
 \chapter{Gravitación}
-%\addcontentsline{toc}{chapter}{Gravitación}
+
 
 
 Habiendo pagado nuestras deudas matemáticas, ahora estamos preparados para examinar la física de la gravitación tal como la describe la Relatividad General.
@@ -4671,7 +4667,7 @@ Esto es algo con lo que aparentemente debemos aprender a vivir, aunque hay ciert
 
 
 \chapter{Más Geometría}
-%\addcontentsline{toc}{chapter}{Más Geometría}
+
 
 
 Una vez que se comprende cómo se adaptan las leyes de la física al Espacio-Tiempo curvo, es innegable que resulta tentador comenzar con las aplicaciones.
@@ -5153,7 +5149,7 @@ Por lo tanto, el problema de encontrar todos los vectores Killing de una métric
 
 
 \chapter{Campos Débiles y Radiación Gravitacional}
-%\addcontentsline{toc}{chapter}{Campos Débiles y Radiación Gravitacional}
+
 
 
 Cuando derivamos por primera vez las ecuaciones de Einstein, comprobamos que estábamos en el camino correcto al considerar el límite newtoniano.
@@ -6021,7 +6017,7 @@ Hulse y Taylor recibieron el Premio Nobel en 1993 por sus esfuerzos.
 
 
 \chapter{La Solución de Schwarzschild y los Agujeros Negros}
-%\addcontentsline{toc}{chapter}{La Solución de Schwarzschild y los Agujeros Negros}
+
 
 
 Ahora pasamos del dominio del límite del campo débil a las soluciones de las ecuaciones no lineales completas de Einstein.
@@ -7726,7 +7722,7 @@ Así que la analogía termodinámica es incluso mejor de lo que teníamos derech
 
 
 \chapter{Cosmología}
-%\addcontentsline{toc}{chapter}{Cosmología}
+
 
 
 Los modelos cosmológicos contemporáneos se basan en la idea de que el universo es más o menos igual en todas partes, una postura a veces conocida como el {\bf principio copernicano}.
