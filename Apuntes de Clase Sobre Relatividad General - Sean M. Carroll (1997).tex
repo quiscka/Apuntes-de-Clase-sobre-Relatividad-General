@@ -97,7 +97,7 @@ footnoteinside = false,]{CajaColor}
 \extrafloats{100}
 
 % -----------------------------------------------------------------------
-\usepackage{hyperref}            %Modifica el aspecto de enlaces, para navegar dentro del libro
+\usepackage{hyperref}
 \hypersetup{colorlinks=true,breaklinks=true,citecolor=AzulEnlace,linkcolor=AzulEnlace,filecolor=AzulEnlace,urlcolor=AzulEnlace}
 
 % -----------------------------------------------------------------------
@@ -111,10 +111,11 @@ Instituto de Física Teórica, Universidad de California \\
 Santa Bárbara, CA 93106, EE.UU \\[2mm]
 Diciembre de 1997 \\[10mm]
 %{\small e-mail: \href{carroll@itp.ucsb.edu}{carroll@itp.ucsb.edu}}
-\parbox{10.6cm}{Estas notas representan aproximadamente un semestre de conferencias sobre introducción a la Relatividad General para estudiantes principiantes de posgrado en física.
-Los temas incluyen variedades, geometría de Riemann, ecuaciones de Einstein y tres aplicaciones: radiación gravitacional, agujeros negros y cosmología.
-Los capítulos individuales y las versiones potencialmente actualizadas se pueden encontrar en \href{http://itp.ucsb.edu/carroll/notes/}{http://itp.ucsb.edu/carroll/notes/}.}
-%\makebox[1in]{} \\
+\parbox{10.6cm}{Estos apuntes representan aproximadamente un semestre de conferencias sobre introducción a la Relatividad General para estudiantes principiantes de posgrado en física.
+Los temas incluyen Variedades, Geometría de Riemann, las Ecuaciones de Einstein y tres aplicaciones: Radiación Gravitacional, Agujeros Negros y Cosmología.
+Los capítulos individuales y las versiones potencialmente actualizadas se pueden encontrar en
+\href{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/tree/main}{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/tree/main}, y anteriormente en:
+ \href{http://itp.ucsb.edu/carroll/notes/}{http://itp.ucsb.edu/carroll/notes/}.}
 }
 
 \date{}
@@ -166,7 +167,7 @@ Se asumió que por la acción intencional de envío y páginas de ayuda que esta
 
 \textbf{Puede descargar este archivo y contribuir en su mejora de Edición y Diagramación. }
 
-Github Proyecto LaTeX: \href{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/blob/main/Apuntes%20de%20Clase%20Sobre%20Relatividad%20General%20-%20Sean%20M.%20Carroll%20(1997).tex}{Apuntes de Clase sobre Relatividad General.tex}
+Github Proyecto LaTeX: Apuntes de Clase sobre Relatividad General, de Sean Carrol (arXiv.org)\\ \href{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/tree/main}{https://github.com/quiscka/Apuntes-de-Clase-sobre-Relatividad-General/tree/main}
 \end{quote}
 
 
@@ -187,9 +188,9 @@ Github Proyecto LaTeX: \href{https://github.com/quiscka/Apuntes-de-Clase-sobre-R
 \addcontentsline{toc}{chapter}{Prólogo}
 
 Estas conferencias representan un curso de posgrado introductorio a la Relatividad General, tanto sus fundamentos como sus aplicaciones.
-Son una versión ligeramente editada de notas que entregué mientras enseñaba Física 8.962, el curso de posgrado en Relatividad General en el MIT, durante la primavera de 1996.
-Aunque se les llama apropiadamente ``notas de clase'', el nivel de detalle es bastante alto, ya sea incluyendo todos los pasos necesarios o dejando espacios en blanco que el lector puede completar fácilmente.
-Sin embargo, hay varios aspectos en los que estas notas se diferencian de un libro de texto; Lo más importante es que no están organizados en secciones cortas que puedan abordarse en varios órdenes, sino que deben repasarse de principio a fin.
+Son una versión ligeramente editada de los apuntes que entregué mientras enseñaba Física 8.962, Curso de Posgrado en Relatividad General en el MIT, durante la primavera de 1996.
+Aunque se les llama apropiadamente ``Apuntes de Clase'', el nivel de detalle es bastante alto, ya sea incluyendo todos los pasos necesarios o dejando espacios en blanco que el lector puede completar fácilmente.
+Sin embargo, hay varios aspectos en los que estos apuntes se diferencian de un libro de texto; lo más importante es que no están organizados en secciones cortas que puedan abordarse en distintos órdenes, sino que deben repasarse de principio a fin.
 Se ha hecho un esfuerzo especial por mantener un tono conversacional, en un intento de ir un poco más allá de los resultados en sí mismos y entrar en el contexto al que pertenecen.
 
 La pregunta principal que enfrenta cualquier tratamiento introductorio de la Relatividad General es el nivel de rigor matemático con el cual operar.
@@ -221,7 +222,7 @@ Contrato del Departamento de Energía no. DE-AC02-76ER03069 y subvenciones de la
 \chapter{Relatividad Especial y Espacio-Tiempo Plano}
 
 Comenzaremos con un recorrido relámpago por la Relatividad Especial y la vida en el Espacio-Tiempo plano.
-El punto será recordar de qué se trata Relatividad Especial e introducir tensores y conceptos relacionados que serán cruciales más adelante, sin las complicaciones adicionales de la curvatura además de todo lo demás.
+El objetivo será recordar de qué se trata la Relatividad Especial e introducir tensores y conceptos relacionados que serán cruciales más adelante, sin las complicaciones adicionales de la curvatura además de todo lo demás.
 Por lo tanto, para esta sección siempre trabajaremos en Espacio-Tiempo plano y además solo usaremos coordenadas ortonormales (de tipo cartesiano).
 Ni que decir tiene que es posible hacer Relatividad Especial en cualquier sistema de coordenadas que se desee, pero resulta que introducir las herramientas necesarias para hacerlo nos llevaría de todos modos a la mitad del camino hacia los espacios curvos, así que lo dejaremos para más adelante.
 
@@ -235,16 +236,9 @@ Sin embargo, no hubo mucha tentación de considerarlos como aspectos diferentes 
 \includegraphics[width=0.7\linewidth]{imagenes/one1.pdf}
 \end{figure}
 
-% \begin{figure}
-% \centering
-% \includegraphics[width=0.7\linewidth]{imagenes/eight1}
-% \caption{dd}
-% \label{fig:eight1}
-% \end{figure}
-
-Considere un plano bidimensional tipo jardín.
-Normalmente resulta conveniente etiquetar los puntos en dicho plano introduciendo coordenadas, por ejemplo definiendo los ejes ortogonales $x$ y $y$ y proyectando cada punto sobre estos ejes de la forma habitual.
-Sin embargo, está claro que la mayoría de los datos geométricos interesantes sobre el plano son independientes de nuestra elección de coordenadas.
+Considere una variedad plana bidimensional ordinaria.
+Normalmente resulta conveniente etiquetar los puntos en dicho plano introduciendo coordenadas, por ejemplo definiendo los ejes $\,x\,$ y $\,y\,$ ortogonales y proyectando cada punto sobre estos ejes de la forma habitual.
+Sin embargo, está claro que la mayoría de los hechos geométricos interesantes sobre el plano son independientes de nuestra elección de coordenadas.
 Como ejemplo simple, podemos considerar la distancia entre dos puntos, dada por
 \begin{equation}
 (\Delta s)^2 = (\Delta x)^2 + (\Delta y)^2\,.\label{1.1}
@@ -300,7 +294,6 @@ Las coordenadas en el Espacio-Tiempo se indicarán mediante letras con índices 
 De este modo,
 \begin{equation}
 x^\mu :\quad \mqty{x^0 = ct  \\  x^1 = x \\  x^2 = y \\  x^3 = z \\ }
-% \pmqty{matrix element 1 & matrix element 2 \\ matrix element 3 & matrix element 4}
 \label{1.5}
 \end{equation}
 (No empieces a pensar en los superíndices como exponentes).
@@ -322,9 +315,9 @@ Por lo tanto, introducimos una matriz $4\times 4$, la {\bf métrica}, que escrib
 0&0&1&0  \\  0&0&0&1 \\ }\right)\,.\label{1.8}
 \end{equation}
 (Algunas referencias, especialmente libros de teoría de campos, definen la métrica con el signo opuesto, así que tenga cuidado).
-Entonces tenemos la buena fórmula.
+Entonces tenemos la preciosa fórmula.
 \begin{equation}
-s^2 = \eta_\mn \Delta x^\mu \Delta x^\nu\,. \label{1.9}
+{\Delta s}^2 = \eta_\mn \Delta x^\mu \Delta x^\nu\,. \label{1.9}
 \end{equation}
 Observe que utilizamos la {\bf convención de sumatoria}, en la que los índices que aparecen como superíndices y subíndices se suman.
 Por tanto, el contenido de (1.9) es exactamente el mismo que el de (1.3).
@@ -348,7 +341,7 @@ x' = \Lambda x\,.\label{1.12}
 Estas transformaciones no dejan las diferencias $\Delta x^\mu$ sin cambios, sino que las multiplican también por la matriz $\Lambda$.
 ¿Qué tipo de matrices dejarán invariante el intervalo? Siguiendo con la notación matricial, lo que nos gustaría es
 \begin{align}
-s^2 = (\Delta x)^{\rm T} \eta (\Delta x)
+(\Delta s)^2 = (\Delta x)^{\rm T} \eta (\Delta x)
 & = (\Delta x')^{\rm T} \eta (\Delta x')\nonumber \\
 & = (\Delta x)^{\rm T} \Lambda^{\rm T} \eta \Lambda (\Delta x)\ ,
 \label{1.13}
@@ -372,11 +365,8 @@ El grupo de rotación se puede considerar como matrices $3\times 3$ $R$ que sati
 \end{equation}
 donde \bigone es la matriz identidad $3\times 3$.
 La similitud con (1.14) debería ser clara; la única diferencia es el signo menos en el primer término de la métrica $\eta$, que indica la dirección temporal.
-Por lo tanto, al grupo de Lorentz se le suele denominar O(3,1).
-% (
-La matriz de identidad $3\times 3$ es simplemente la métrica del espacio plano ordinario.
-Una métrica de este tipo, en la que todos los valores propios son positivos, se denomina {\bf euclidiana}, mientras que aquellas como (1.8) que presentan un único signo menos se denominan {\bf lorentziana}.
-% )
+Por lo tanto, al grupo de Lorentz se le suele denominar O(3,1). (La matriz de identidad $3\times 3$ es simplemente la métrica del espacio plano ordinario.
+Una métrica de este tipo, en la que todos los valores propios son positivos, se denomina {\bf euclidiana}, mientras que aquellas como (1.8) que presentan un único signo menos se denominan {\bf lorentziana}.)
 
 Las transformaciones de Lorentz se dividen en varias categorías.
 Primero están las {\bf rotaciones} convencionales, como una rotación en el plano $x$-$y$:
@@ -386,20 +376,20 @@ Primero están las {\bf rotaciones} convencionales, como una rotación en el pla
 0&0&0&1 \\ }\right)\,.\label{1.17}
 \end{equation}
 El ángulo de rotación $\theta$ es una variable periódica con período $2\pi$.
-También hay un {\bf momentum}, que puede considerarse como ``rotaciones entre las direcciones del espacio y del tiempo''.
+También hay {\bf boosts}, (impulsores, o transformaciones espacio-temporales) que puede considerarse como ``rotaciones entre las direcciones del espacio y del tiempo''.
 \begin{equation}
 \Lambda^{\mu'}{}_\nu = \left(\mqty{ \cosh\phi&-\sinh\phi &0&0 \\
 -\sinh\phi&\cosh\phi &0&0 \\  0&0&1&0 \\
 0&0&0&1 \\ }\right)\,.\label{1.18}
 \end{equation}
-El parámetro de momentum $\phi$, a diferencia del ángulo de rotación, se define de $-\infty$ a $\infty$.
+El parámetro de \textit{boost} $\phi$, a diferencia del ángulo de rotación, se define de $-\infty$ a $\infty$.
 También hay transformaciones discretas que invierten la dirección del tiempo o una o más de las direcciones espaciales.
-(Cuando se excluyen, tenemos el grupo de Lorentz adecuado, SO(3,1).)
-Se puede obtener una transformación general multiplicando las transformaciones individuales; La expresión explícita de esta matriz de seis parámetros (tres momentos, tres rotaciones) no es lo suficientemente bonita ni útil como para molestarse en escribirla.
+(Cuando se excluyen, tenemos el grupo de Lorentz propio, SO(3,1).)
+Se puede obtener una transformación general multiplicando las transformaciones individuales; La expresión explícita de esta matriz de seis parámetros (tres \textit{boosts}, tres rotaciones) no es lo suficientemente bonita ni útil como para molestarse en escribirla.
 En general, las transformaciones de Lorentz no conmutarán, por lo que el grupo de Lorentz no es abeliano.
 El conjunto de traslaciones y transformaciones de Lorentz es un grupo no abeliano de diez parámetros, el {\bf grupo de Poincaré}.
 
-No debería sorprenderte saber que los momentos corresponden a cambios de coordenadas al moverte a un marco que viaja a una velocidad constante, pero veámoslo más explícitamente.
+No debería sorprenderte saber que los \textit{boosts} corresponden a cambios de coordenadas al moverte a un marco que viaja a una velocidad constante, pero veámoslo más explícitamente.
 Para la transformación dada por (1.18), las coordenadas transformadas $t'$ y $x'$ vendrán dadas por
 \begin{align}
 t' &=  t\cosh\phi - x \sinh\phi \nonumber \\
@@ -421,7 +411,7 @@ La aplicación de estas fórmulas conduce a la dilatación del tiempo, la contra
 
 Una herramienta extremadamente útil es el {\bf diagrama Espacio-Tiempo}, así que consideremos el espacio de Minkowski desde este punto de vista.
 Podemos comenzar representando los ejes iniciales $t$ y $x$ en (lo que convencionalmente se considera) ángulos rectos y suprimiendo los ejes $y$ y $z$.
-Luego, según (1.19), bajo un momentum en el plano $x$-$t$ el eje $x'$ ($t' = 0$) está dado por $t = x \tanh\phi$, mientras que el eje $t'$ ($x' = 0$) está dado por $t = x/\tanh\phi$.
+Luego, según (1.19), bajo un \textit{boost} en el plano $x$-$t$ el eje $x'$ ($t' = 0$) está dado por $t = x \tanh\phi$, mientras que el eje $t'$ ($x' = 0$) está dado por $t = x/\tanh\phi$.
 Por lo tanto, vemos que los ejes espacio y tiempo giran entre sí, aunque se dividen entre sí en lugar de permanecer ortogonales en el sentido euclidiano tradicional.
 (Como veremos, los ejes, de hecho, siguen siendo ortogonales en el sentido lorentziano.)
 Esto no debería sorprendernos, ya que si el Espacio-Tiempo se comportara como una versión cuatridimensional del espacio, el mundo sería un lugar muy diferente.
@@ -443,8 +433,8 @@ Note la distinción entre esta situación y la del mundo newtoniano; aquí, es i
 
 Para estudiar la estructura del espacio de Minkowski con más detalle, es necesario introducir los conceptos de vectores y tensores.
 Comenzaremos con vectores, que deberían resultarle familiares.
-Por supuesto, en el Espacio-Tiempo los vectores son de cuatro dimensiones y a menudo se les denomina {\bf cuatro vectores}.
-Esto resulta marcar una gran diferencia; por ejemplo, no existe un producto cruzado entre dos cuatro vectores.
+Por supuesto, en el Espacio-Tiempo los vectores son de cuatro dimensiones y a menudo se les denomina {\bf cuatro-vectores}.
+Esto resulta marcar una gran diferencia; por ejemplo, no existe un producto cruzado entre dos cuatro-vectores.
 
 Más allá del simple hecho de la dimensionalidad, lo más importante a destacar es que cada vector se ubica en un punto determinado del Espacio-Tiempo.
 Es posible que esté acostumbrado a pensar que los vectores se extienden de un punto a otro en el espacio, e incluso que los vectores ``libres'' pueden deslizarse descuidadamente de un punto a otro.
@@ -470,13 +460,13 @@ Todo espacio vectorial tiene un origen, es decir, un vector cero que funciona co
 En muchos espacios vectoriales hay operaciones adicionales, como tomar un producto interno (punto), pero esto es una estructura adicional por encima del concepto elemental de espacio vectorial.
 
 Un vector es un objeto geométrico perfectamente bien definido, al igual que un {\bf campo vectorial}, definido como un conjunto de vectores con exactamente uno en cada punto del Espacio-Tiempo.
-(El conjunto de todos los espacios tangentes de una variedad $M$ se llama {\bf paquete tangente}, $T(M)$.)
+(El conjunto de todos los espacios tangentes de una variedad $M$ se llama {\bf haz tangente}, $T(M)$.)
 Sin embargo, suele ser útil para propósitos concretos descomponer los vectores en componentes con respecto a algún conjunto de vectores base.
 Una {\bf base} es cualquier conjunto de vectores que abarca el espacio vectorial (cualquier vector es una combinación lineal de vectores base) y es linealmente independiente (ningún vector en la base es una combinación lineal de otros vectores base).
 Para cualquier espacio vectorial dado, habrá un número infinito de bases legítimas, pero cada base estará formada por el mismo número de vectores, conocido como dimensión del espacio.
 (Para un espacio tangente asociado con un punto en el espacio de Minkowski, la dimensión es, por supuesto, cuatro).
 
-Imaginemos que en cada espacio tangente establecemos una base de cuatro vectores $\e\mu$, siendo $\mu\in\{0,1,2,3\}$ como de costumbre.
+Imaginemos que en cada espacio tangente establecemos una base de cuatro-vectores $\e\mu$, siendo $\mu\in\{0,1,2,3\}$ como de costumbre.
 De hecho digamos que cada base se adapta a las coordenadas $x^\mu$; es decir, el vector base $\e1$ es lo que normalmente pensaríamos que apunta a lo largo del eje $x$, etc.
 No es en absoluto necesario que elijamos una base que se adapte a cualquier sistema de coordenadas, aunque suele ser conveniente.
 (Realmente podríamos ser más precisos aquí, pero más adelante repetiremos la discusión con un nivel de precisión insoportable, por lo que ahora es perdonable algo de descuido).
@@ -487,10 +477,8 @@ A = A^\mu \e\mu\,.\label{1.23}
 Los coeficientes $A^\mu$ son los {\bf componentes} del vector $A$.
 La mayoría de las veces olvidaremos la base por completo y nos referiremos un poco vagamente al ``vector $A^\mu$'', pero tenga en cuenta que esto es una abreviatura.
 El vector real es una entidad geométrica abstracta, mientras que los componentes son sólo los coeficientes de los vectores base en alguna base conveniente.
-% (
-Dado que normalmente suprimiremos los vectores de base explícitos, los índices normalmente etiquetarán componentes de vectores y tensores.
-Es por eso que hay paréntesis alrededor de los índices de los vectores base, para recordarnos que se trata de una colección de vectores, no de componentes de un solo vector.
-% )
+(Dado que normalmente suprimiremos los vectores de base explícitos, los índices normalmente etiquetarán componentes de vectores y tensores.
+Es por eso que hay paréntesis alrededor de los índices de los vectores base, para recordarnos que se trata de una colección de vectores, no de componentes de un solo vector.)
 
 Un ejemplo estándar de vector en el Espacio-Tiempo es el vector tangente a una curva.
 Una curva o ruta parametrizada a través del Espacio-Tiempo se especifica mediante las coordenadas en función del parámetro, {\it eg} $x^\mu(\lambda)$.
@@ -583,7 +571,7 @@ V(\omega) \equiv \omega(V) = \omega_\mu V^\mu\,.\label{1.36}
 Por lo tanto, el espacio dual del espacio vectorial dual es el propio espacio vectorial original.
 
 Por supuesto, en el Espacio-Tiempo no nos interesará un espacio vectorial único, sino campos de vectores y vectores duales.
-(El conjunto de todos los espacios cotangentes sobre $M$ es el {\bf paquete cotangente}, $T^*(M)$.)
+(El conjunto de todos los espacios cotangentes sobre $M$ es el {\bf haz cotangente}, $T^*(M)$.)
 En ese caso, la acción de un campo vectorial dual sobre un campo vectorial no es un número único, sino un {\bf escalar} (o simplemente una ``función'') en el Espacio-Tiempo.
 Un escalar es una cantidad sin índices, que no cambia bajo las transformaciones de Lorentz.
 
@@ -647,7 +635,7 @@ Así como un vector dual es un mapa lineal de vectores a $\mathbb{R}$, un tensor
 \begin{align}
 T:~ &T^*_p\times\cdots\times T^*_p\times T_p\times\cdots
 \times T_p \rightarrow \mathbb{R}\nonumber \\
-& (k~{\rm times})\qquad\quad (l~{\rm times}) \label{1.44}
+& (k~{\rm veces})\qquad\quad (l~{\rm veces}) \label{1.44}
 \end{align}
 Aquí, ``$\times$'' denota el producto cartesiano, de modo que, por ejemplo, $T_p\times T_p$ es el espacio de pares ordenados de vectores.
 Multilinealidad significa que el tensor actúa linealmente en cada uno de sus argumentos; por ejemplo, para un tensor de tipo $(1,1)$, tenemos
@@ -762,10 +750,12 @@ Al igual que con el producto escalar euclidiano convencional, nos referiremos a 
 Dado que el producto escalar es un escalar, se deja invariante bajo las transformaciones de Lorentz; por lo tanto, los vectores base de cualquier sistema inercial cartesiano, que se eligen como ortogonales por definición, siguen siendo ortogonales después de una transformación de Lorentz (a pesar del ``tijeraje'' que notamos anteriormente).
 La {\bf norma} de un vector se define como el producto interno del vector consigo mismo; a diferencia del espacio euclidiano, este número no es definido positivo:
 \begin{equation*}
-{\rm ~if~~}\eta_\mn V^\mu V^\nu
-{\rm ~~is~}\left\{\mqty{<0\ ,\ V^\mu {\rm ~is~timelike}\hfill \\
-=0\ ,\ V^\mu {\rm ~is~lightlike~or~null}\hfill \\
->0\ ,\ V^\mu {\rm ~is~spacelike}\,.\hfill \\ }\right.
+\text{Si }\; \eta_\mn V^\mu V^\nu\; \text{ es }\; \left\{
+\begin{aligned}
+<0\,, \quad & \; V^\mu \text{ es similar a Tiempo} \\
+=0\,, \quad & \; V^\mu \text{ es similar a la Luz ó Nulo} \\
+>0\,, \quad & \; V^\mu \text{ es similar a Espacio}
+\end{aligned} \right.
 \end{equation*}
 (Un vector puede tener norma cero sin ser el vector cero).
 Notarás que la terminología es la misma que usamos anteriormente para clasificar la relación entre dos puntos en el Espacio-Tiempo; Por supuesto, no es casualidad y entraremos en más detalles más adelante.
@@ -980,12 +970,12 @@ Por tanto, decimos que (1.77) y (1.78) juntas sirven como forma covariante de la
 
 Introduzcamos ahora una clase especial de tensores, conocida como {\bf formas diferenciales} (o simplemente ``formas'').
 Una forma diferencial $p$ es un tensor $(0,p)$ que es completamente antisimétrico.
-Por lo tanto, los escalares son automáticamente formas 0 y los vectores duales son automáticamente formas uno (explicando así esta terminología de hace un tiempo).
-También tenemos el $F_{\mu\nu}$ de 2 formas y el $\epsilon_{\mu\nu\rho\sigma}$ de 4 formas.
+Por lo tanto, los escalares son automáticamente $0$-formas y los vectores duales son automáticamente $1$-formas (explicando así esta terminología de hace un tiempo).
+También tenemos la $2$-forma $F_{\mu\nu}$ y la $4$-forma $\epsilon_{\mu\nu\rho\sigma}$.
 El espacio de todos los formularios $p$ se denomina $\Lambda^p$ y el espacio de todos los campos del formulario $p$ sobre una variedad $M$ se denomina $\Lambda^p(M)$.
 Un ejercicio semisencillo de combinatoria revela que el número de formas $p$ linealmente independientes en un espacio vectorial de dimensión $n$ es $n!/(p!(n-p)!)$.
-Entonces, en un punto de un Espacio-Tiempo de 4 dimensiones hay una forma 0 linealmente independiente, cuatro formas 1, seis formas 2, cuatro formas 3 y una forma 4.
-No hay formas $p$ para $p>n$, ya que todos los componentes serán automáticamente cero por antisimetría.
+Entonces, en un punto de un Espacio-Tiempo de 4 dimensiones hay una $0$-forma linealmente independiente, cuatro $1$-formas, seis $2$-formas, cuatro $3$-formas y una $4$-forma.
+No hay $p$-formas para $p>n$, ya que todos los componentes serán automáticamente cero por antisimetría.
 
 ¿Por qué deberíamos preocuparnos por las formas diferenciales? Esta es una pregunta difícil de responder sin más trabajo, pero la idea básica es que las formas pueden diferenciarse e integrarse, sin la ayuda de ninguna estructura geométrica adicional.
 Retrasaremos la teoría de la integración para más adelante, pero veremos cómo diferenciar formas en breve.
@@ -995,7 +985,7 @@ Dada una forma $p$ $A$ y una forma $q$ $B$, podemos formar una forma $(p+q)$ con
 (A\wedge B)_{\mu_1 \cdots \mu_{p+q}} = {{(p+q)!}\over{p!\ q!}}
 A_{[\mu_1\cdots \mu_p} B_{\mu_{p+1}\cdots\mu_{p+q}]}\,.\label{1.79}
 \end{equation}
-Así, por ejemplo, el producto cuña de dos formas 1 es
+Así, por ejemplo, el producto cuña de dos $1$-formas es
 \begin{equation}
 (A\wedge B)_{\mu\nu} = 2A_{[\mu}B_{\nu]} = A_\mu B_\nu
 - A_\nu B_\mu\,.\label{1.80}
@@ -1034,10 +1024,8 @@ Defina un nuevo espacio vectorial como módulo de formas cerradas de las formas 
 H^p(M) = {{Z^p(M)}\over{B^p(M)}}\,.\label{1.85}
 \end{equation}
 Esto se conoce como el $p$-ésimo espacio vectorial de cohomología de Rham y depende únicamente de la topología de la variedad $M$.
-% (
-El espacio de Minkowski es topológicamente equivalente a $\mathbb{R}^4$, lo cual no es interesante, de modo que todos los $H^p(M)$ desaparecen para $p>0$; para $p=0$ tenemos $H^0(M)=\mathbb{R}$.
-Por tanto, en el espacio de Minkowski todas las formas cerradas son exactas excepto las formas cero; Las formas cero no pueden ser exactas ya que no hay formas $-1$ de las que puedan ser derivadas exteriores.
-% )
+(El espacio de Minkowski es topológicamente equivalente a $\mathbb{R}^4$, lo cual no es interesante, de modo que todos los $H^p(M)$ desaparecen para $p>0$; para $p=0$ tenemos $H^0(M)=\mathbb{R}$.
+Por tanto, en el espacio de Minkowski todas las formas cerradas son exactas excepto las formas cero; Las formas cero no pueden ser exactas ya que no hay formas $-1$ de las que puedan ser derivadas exteriores.)
 Llama la atención que de esta manera se pueda extraer información sobre la topología, lo que esencialmente implica las soluciones de ecuaciones diferenciales.
 La dimensión $b_p$ del espacio $H^p(M)$ se denomina $p$-ésimo número de Betti de $M$, y la característica de Euler viene dada por la suma alterna
 \begin{equation}
@@ -1068,12 +1056,12 @@ Por lo tanto, si $A^{(n-p)}$ es una forma $(n-p)$ y $B^{(p)}$ es una forma $p$ e
 *(A^{(n-p)}\wedge B^{(p)}) \in \mathbb{R}\,.\label{1.89}
 \end{equation}
 El segundo hecho se refiere a las formas diferenciales en el espacio euclidiano tridimensional.
-El dual de Hodge del producto cuña de dos formas 1 da otra forma 1:
+El dual de Hodge del producto cuña de dos $1$-formas da otra $1$-forma:
 \begin{equation}
 *(U\wedge V)_i = \epsilon_i{}^{jk}U_j V_k\,.\label{1.90}
 \end{equation}
 (Todos los prefactores se cancelan).
-Dado que las formas 1 en el espacio euclidiano son como vectores, tenemos una aplicación de dos vectores a un solo vector.
+Dado que las $1$-formas en el espacio euclidiano son como vectores, tenemos una aplicación de dos vectores a un solo vector.
 Debes convencerte de que este es solo el producto cruzado convencional y que la aparición del tensor de Levi-Civita explica por qué el producto cruzado cambia de signo bajo paridad (intercambio de dos coordenadas o, de manera equivalente, vectores de base).
 Esta es la razón por la que el producto cruzado sólo existe en tres dimensiones, porque sólo en tres dimensiones tenemos un mapa interesante de dos vectores duales a un tercer vector dual.
 Si quisiera, podría definir un mapa de $n-1$ one-forms a un one-form único, pero no estoy seguro de que sea de alguna utilidad.
@@ -1095,7 +1083,7 @@ La otra de las ecuaciones de Maxwell, (1.77), se puede expresar como una ecuaci�
 \begin{equation}
 \d(*F) = 4\pi(* J)\ ,\label{1.93}
 \end{equation}
-donde la forma única actual $J$ es solo el vector de cuatro actual con el índice reducido.
+donde la forma única actual $J$ es solo el actual cuatro-vector con el índice reducido.
 Usted debe completar los detalles.
 
 Como curiosidad, la dualidad de Hodge es la base de uno de los temas más candentes de la física teórica actual.
@@ -1155,32 +1143,32 @@ Para caminos temporales definimos el {\bf tiempo propio}
 \end{equation}
 lo cual será positivo.
 Por supuesto, podemos considerar trayectorias que sean temporales en algunos lugares y espaciales en otros, pero afortunadamente rara vez es necesario, ya que las trayectorias de las partículas físicas nunca cambian de carácter (las partículas masivas se mueven por trayectorias temporales, las partículas sin masa se mueven por trayectorias nulas).
-Además, la frase ``tiempo adecuado'' es especialmente apropiada, ya que $\tau$ \textit{en realidad mide el tiempo transcurrido en un reloj físico transportado a lo largo del camino}.
-Este punto de vista deja muy clara la ``paradoja de los gemelos'' y enigmas similares; Dos líneas de mundo, no necesariamente rectas, que se cruzan en dos eventos diferentes en el Espacio-Tiempo tendrán tiempos adecuados medidos por la integral (1.97) a lo largo de los caminos apropiados, y estos dos números serán en general diferentes incluso si las personas que viajan a lo largo de ellos nacieron en al mismo tiempo.
+Además, la frase ``tiempo propio'' es especialmente apropiada, ya que $\tau$ \textit{en realidad mide el tiempo transcurrido en un reloj físico transportado a lo largo del camino}.
+Este punto de vista deja muy clara la ``paradoja de los gemelos'' y enigmas similares; Dos líneas de mundo, no necesariamente rectas, que se cruzan en dos eventos diferentes en el Espacio-Tiempo tendrán tiempos propios medidos por la integral (1.97) a lo largo de los caminos apropiados, y estos dos números serán en general diferentes incluso si las personas que viajan a lo largo de ellos nacieron en al mismo tiempo.
 
 Pasemos de la consideración de las trayectorias en general a las trayectorias de partículas masivas (que siempre serán temporales).
-Dado que el tiempo adecuado se mide mediante un reloj que viaja en una línea temporal similar al tiempo, es conveniente utilizar $\tau$ como parámetro a lo largo de la ruta.
+Dado que el tiempo propio se mide mediante un reloj que viaja en una línea temporal similar al tiempo, es conveniente utilizar $\tau$ como parámetro a lo largo de la ruta.
 Es decir, usamos (1.97) para calcular $\tau(\lambda)$, que (si $\lambda$ es un buen parámetro en primer lugar) podemos invertir para obtener $\lambda(\tau)$, después de lo cual podemos pensar en la ruta como $x^\mu(\tau)$ .
-El vector tangente en esta parametrización se conoce como {\bf cuatro velocidades}, $U^\mu$:
+El vector tangente en esta parametrización se conoce como {\bf cuatro-velocidad}, $U^\mu$:
 \begin{equation}
 U^\mu = {{dx^\mu}\over{d\tau}}\,.\label{1.98}
 \end{equation}
-Desde $d\tau^2 = -\eta_\mn dx^\mu dx^\nu$, las cuatro velocidades se normalizan automáticamente:
+Desde $d\tau^2 = -\eta_\mn dx^\mu dx^\nu$, la cuatro-velocidad se normalizan automáticamente:
 \begin{equation}
 \eta_\mn U^\mu U^\nu = -1\,.\label{1.99}
 \end{equation}
 (Siempre será negativo, ya que sólo lo estamos definiendo para trayectorias temporales.
 También podrías definir un vector análogo para caminos espaciales; Las rutas nulas dan algunos problemas adicionales ya que la norma es cero.)
-En el sistema de reposo de una partícula, su cuatro velocidades tiene componentes $U^\mu = (1,0,0,0)$.
+En el sistema de reposo de una partícula, su cuatro-velocidad tiene componentes $U^\mu = (1,0,0,0)$.
 
-Un vector relacionado es el {\bf cuatro vectores de energía-momentum}, definido por
+Un vector relacionado es el {\bf cuatro-vectores de energía-momentum}, definido por
 \begin{equation}
 p^\mu = m U^\mu\ ,\label{1.100}
 \end{equation}
 donde $m$ es la masa de la partícula.
 La masa es una cantidad fija independiente del sistema inercial; lo que usted puede estar acostumbrado a considerar como ``masa en reposo''. Resulta mucho más conveniente tomar esto como la masa de una vez por todas, en lugar de pensar que la masa depende de la velocidad.
 La {\bf energía} de una partícula es simplemente $p^0$, la componente temporal de su vector energía-momentum.
-Dado que es sólo un componente de un cuatro vectores, no es invariante bajo las transformaciones de Lorentz; Sin embargo, eso es de esperarse, ya que la energía de una partícula en reposo no es la misma que la de la misma partícula en movimiento.
+Dado que es sólo un componente de un cuatro-vectores, no es invariante bajo las transformaciones de Lorentz; Sin embargo, eso es de esperarse, ya que la energía de una partícula en reposo no es la misma que la de la misma partícula en movimiento.
 En el sistema de reposo de la partícula tenemos $p^0 =m$; Recordando que hemos establecido $c=1$, encontramos que hemos encontrado la ecuación que convirtió a Einstein en una celebridad, $E=mc^2$.
 (Las ecuaciones de campo de la Relatividad General son en realidad mucho más importantes que ésta, pero ``$R_\mn - {1\over 2} Rg_\mn = 8\pi G T_\mn$'' no provoca la reacción visceral que se obtiene con ``$E=mc^2$''.)
 En un marco móvil podemos encontrar los componentes de $p^\mu$ realizando una transformación de Lorentz; para una partícula que se mueve con (tres) velocidad $v$ a lo largo del eje $x$ tenemos
@@ -1192,7 +1180,7 @@ Para $v$ pequeño, esto da $p^0 = m+{1\over 2}mv^2$ (lo que normalmente consider
 De modo que el vector energía-momentum hace honor a su nombre.
 
 La pieza central de la física anterior a la relatividad es la Segunda Ley de Newton, o ${\bf f}=m{\bf a} = d{\bf p}/dt$.
-Una ecuación análoga debería ser válida en Relatividad Especial, y el requisito de que sea tensorial nos lleva directamente a introducir una fuerza de cuatro vectores $f^\mu$ que satisfaga
+Una ecuación análoga debería ser válida en Relatividad Especial, y el requisito de que sea tensorial nos lleva directamente a introducir una fuerza de cuatro-vectores $f^\mu$ que satisfaga
 \begin{equation}
 f^\mu = m{{d^2}\over{d\tau^2}}x^\mu(\tau) = {{d}\over{d\tau}}
 p^\mu(\tau)\,.\label{1.102}
@@ -1212,7 +1200,7 @@ Este es un ejemplo de un fenómeno muy general, en el que un pequeño número de
 
 Aunque $p^\mu$ proporciona una descripción completa de la energía y el momentum de una partícula, para sistemas extendidos es necesario ir más allá y definir el {\bf tensor energía-momentum} (a veces llamado tensor tensión-energía), $T^\mn$ .
 Este es un tensor simétrico $(2,0)$ que nos dice todo lo que necesitamos saber sobre los aspectos similares a la energía de un sistema: densidad de energía, presión, tensión, etc.
-Una definición general de $T^\mn$ es ``el flujo de cuatro momentos $p^\mu$ a través de una superficie de constante $x^\nu$''.
+Una definición general de $T^\mn$ es ``el flujo del cuatro-momentum $p^\mu$ a través de una superficie de constante $x^\nu$''.
 Para hacer esto más concreto, consideremos la categoría muy general de materia que puede caracterizarse como un {\bf fluido} --- un continuo de materia descrito por cantidades macroscópicas como temperatura, presión, entropía, viscosidad, etc.
 De hecho esta definición es tan general que resulta de poca utilidad.
 En la Relatividad General, esencialmente todos los tipos interesantes de materia pueden considerarse como {\bf fluidos perfectos}, desde las estrellas hasta los campos electromagnéticos y el universo entero.
@@ -1221,9 +1209,9 @@ Operacionalmente, se debe pensar en un fluido perfecto como aquel que puede cara
 
 Para entender los fluidos perfectos, comencemos con el ejemplo aún más simple de {\bf polvo}.
 El polvo se define como un conjunto de partículas en reposo unas con respecto a otras o, alternativamente, como un fluido perfecto con presión cero.
-Dado que todas las partículas tienen la misma velocidad en cualquier sistema inercial fijo, podemos imaginar un ``campo de cuatro velocidades'' $U^\mu(x)$ definido en todo el Espacio-Tiempo.
+Dado que todas las partículas tienen la misma velocidad en cualquier sistema inercial fijo, podemos imaginar un ``campo de cuatro-velocidad'' $U^\mu(x)$ definido en todo el Espacio-Tiempo.
 (De hecho, sus componentes son los mismos en cada punto).
-Defina el {\bf flujo de números de cuatro vectores} como
+Defina el {\bf flujo de números de cuatro-vectores} como
 \begin{equation}
 N^\mu = n U^\mu\ ,\label{1.104}
 \end{equation}
@@ -1235,7 +1223,7 @@ Luego, en el cuadro de reposo, la densidad de energía del polvo viene dada por
 \rho = nm\,.\label{1.105}
 \end{equation}
 Por definición, la densidad de energía especifica completamente el polvo.
-Pero $\rho$ sólo mide la densidad de energía en el marco de reposo; ¿Qué pasa con otros marcos? Observamos que tanto $n$ como $m$ son componentes $0$ de cuatro vectores en su marco de reposo; específicamente, $N^\mu = (n,0,0,0)$ y $p^\mu = (m,0,0,0)$.
+Pero $\rho$ sólo mide la densidad de energía en el marco de reposo; ¿Qué pasa con otros marcos? Observamos que tanto $n$ como $m$ son componentes $0$ de cuatro-vectores en su marco de reposo; específicamente, $N^\mu = (n,0,0,0)$ y $p^\mu = (m,0,0,0)$.
 Por lo tanto, $\rho$ es el componente $\mu = 0$, $\nu =0$ del tensor $p\otimes N$ medido en su marco de reposo.
 Por tanto, nos vemos obligados a definir el tensor de energía-momentum del polvo:
 \begin{equation}
@@ -1303,7 +1291,7 @@ Aunque no existe una respuesta ``correcta'', es una cuestión importante desde e
 
 
 
-\chapter{Colectores}
+\chapter{Variedades}
 
 
 Después de la invención de la Relatividad Especial, Einstein intentó durante varios años inventar una teoría de la gravedad invariante de Lorentz, sin éxito.
@@ -1320,7 +1308,7 @@ Todo el colector se construye cosiendo suavemente estas regiones locales.
 Ejemplos de variedades incluyen:
 
 \begin{itemize}
-\item $\mathbb{R}^n$ en sí, incluida la línea ($\mathbb{R}$), el avión ($\mathbb{R}^2$), etc.
+\item $\mathbb{R}^n$ en sí, incluida la línea ($\mathbb{R}$), el plano ($\mathbb{R}^2$), etc.
 Esto debería ser obvio, ya que $\mathbb{R}^n$ se parece a $\mathbb{R}^n$ no sólo a nivel local sino también global.
 \item La esfera $n$, $S^n$.
 Esto se puede definir como el lugar geométrico de todos los puntos a una distancia fija del origen en $\mathbb{R}^{n+1}$.
@@ -1334,7 +1322,7 @@ Por tanto, $T^2$ es la superficie tradicional de un donut.
 \includegraphics[width=0.7\linewidth]{imagenes/two01.pdf}
 \end{figure}
 
-\item Una superficie de Riemann del género $g$ es esencialmente un dos toros con agujeros $g$ en lugar de solo uno.
+\item Una superficie de Riemann del género $g$ es esencialmente un dos-toros con $g$ agujeros en lugar de solo uno.
 $S^2$ puede considerarse como una superficie de Riemann de género cero.
 Para aquellos de ustedes que saben lo que significan las palabras, cada variedad bidimensional ``compacta, orientable y sin límites'' es una superficie de Riemann de algún género.
 
@@ -1344,7 +1332,7 @@ Para aquellos de ustedes que saben lo que significan las palabras, cada variedad
 \end{figure}
 
 \item De manera más abstracta, un conjunto de transformaciones continuas, como rotaciones en $\mathbb{R}^n$, forma una variedad.
-Los grupos de mentiras son variedades que también tienen una estructura de grupo.
+Los grupos de Lie son variedades que también tienen una estructura de grupo.
 
 \item El producto directo de dos variedades es una variedad.
 Es decir, dadas las variedades $M$ y $M'$ de dimensión $n$ y $n'$, podemos construir una variedad $M\times M'$, de dimensión $n+n'$, que consta de pares ordenados $(p,p')$ para todos los $p\in M$ y $p'\in M'$.
@@ -1363,7 +1351,7 @@ Los ejemplos incluyen una línea unidimensional que desemboca en un plano bidime
 Nos acercaremos ahora a la definición rigurosa de esta sencilla idea, que requiere una serie de definiciones preliminares.
 Muchos de ellos son bastante claros de todos modos, pero es bueno estar completos.
 
-La noción más elemental es la de un {\bf map} entre dos conjuntos.
+La noción más elemental es la de un {\bf mapa} entre dos conjuntos.
 (Asumimos que sabes qué es un conjunto).
 Dados dos conjuntos $M$ y $N$, un mapa $\phi: M\rightarrow N$ es una relación que asigna, a cada elemento de $M$, exactamente un elemento de $N$.
 Por tanto, un mapa es simplemente una simple generalización de una función.
@@ -1479,7 +1467,7 @@ Entonces podemos decir que $U$ es un conjunto abierto en $M$.
 \end{figure}
 
 \noindent
-Un {\bf $C^\infty$ atlas} es una colección indexada de cartas $\{(U_\alpha,\phi_\alpha)\}$ que satisface dos condiciones:
+Un {\bf atlas $C^\infty$} es una colección indexada de cartas $\{(U_\alpha,\phi_\alpha)\}$ que satisface dos condiciones:
 
 \begin{enumerate}
 \item La unión del $U_\alpha$ es igual a $M$; es decir, la tapa $U_\alpha$ $M$.
@@ -1497,7 +1485,7 @@ Esto debería quedar más claro en las imágenes:
 \noindent
 Entonces, una carta es lo que normalmente consideramos un sistema de coordenadas en algún conjunto abierto, y un atlas es un sistema de cartas que se relacionan suavemente en sus superposiciones.
 
-Entonces, por fin: una variedad {\bf} de dimensión $C^\infty$ $n$ (o variedad $n$ para abreviar) es simplemente un conjunto $M$ junto con un ``atlas máximo'', uno que contiene todas las cartas compatibles posibles.
+Entonces, por fin: una variedad de dimensión $C^\infty$ $n$ (o variedad $n$ para abreviar) es simplemente un conjunto $M$ junto con un ``atlas máximo'', uno que contiene todas las cartas compatibles posibles.
 (También podemos reemplazar $C^\infty$ por $C^p$ en todas las definiciones anteriores.
 Para nuestros propósitos, el grado de diferenciabilidad de una variedad no es crucial; Siempre asumiremos que cualquier variedad es tan diferenciable como sea necesario para la aplicación en consideración).
 El requisito de que el atlas sea máximo es que dos espacios equivalentes equipados con atlas diferentes no cuenten como variedades diferentes.
@@ -1605,7 +1593,7 @@ Para establecer esta idea debemos demostrar dos cosas: primero, que el espacio d
 La primera afirmación, que las derivadas direccionales forman un espacio vectorial, parece bastante sencilla.
 Imagine dos operadores ${d\over{d\lambda}}$ y ${d\over{d\eta}}$ que representan derivados a lo largo de dos curvas que pasan por $p$.
 No hay problema en sumarlos y escalar por números reales, para obtener un nuevo operador $a{d\over{d\lambda}}+ b{d\over{d\eta}}$.
-Sin embargo, no es inmediatamente obvio que el espacio se cierre; {\it ie}, que el operador resultante es en sí mismo un operador derivativo.
+Sin embargo, no es inmediatamente obvio que el espacio se cierre; {\it p. ej.}, que el operador resultante es en sí mismo un operador derivativo.
 Un buen operador derivativo es aquel que actúa linealmente sobre funciones y obedece la regla convencional de Leibniz (producto) sobre productos de funciones.
 Nuestro nuevo operador es manifiestamente lineal, por lo que debemos verificar que obedece la regla de Leibniz.
 Tenemos
@@ -1853,9 +1841,9 @@ ds^2 =  d\,r^2 + r^2 \, d\,\theta^2 + r^2\sin^2\theta\, d\,\phi^2\,.\label{2.32}
 \end{equation}
 Obviamente, los componentes de la métrica se ven diferentes a los de las coordenadas cartesianas, pero todas las propiedades del espacio permanecen inalteradas.
 
-Quizás esta sea una excelente oportunidad para señalar que la mayoría de las referencias no son lo suficientemente exigentes como para distinguir entre ``$dx$'', la noción informal de un desplazamiento infinitesimal, y ``$ d\,x$'', la noción rigurosa de una base uno. -forma dada por el gradiente de una función de coordenadas.
+Quizás esta sea una excelente oportunidad para señalar que la mayoría de las referencias, no son lo suficientemente exigentes, como para distinguir entre ``$dx$'', que es \textit{la noción informal de un desplazamiento infinitesimal}; y ``$d\,x$'', que es \textit{la noción rigurosa de una base 1-forma} dada por el gradiente de una función de coordenadas.
 De hecho, nuestra notación ``$ds^2$'' no se refiere a la derivada exterior de nada, ni al cuadrado de nada; es simplemente una abreviatura convencional para el tensor métrico.
-Por otro lado, ``$( d\,x)^2$'' se refiere específicamente al tensor $(0,2)$ $ d\,x\otimes d\,x$.
+Por otro lado, ``$( d\,x)^2$'' se refiere específicamente al tensor $(0,2)$: $ d\,x\otimes d\,x$.
 
 Un buen ejemplo de un espacio con curvatura es el de dos esferas, que puede considerarse como el lugar geométrico de los puntos en $\R^3$ a una distancia 1 del origen.
 La métrica en el sistema de coordenadas $(\theta, \phi)$ proviene de configurar $r=1$ y $ d\,r=0$ en (2.32):
@@ -2448,7 +2436,7 @@ Antes de continuar, revisemos el proceso mediante el cual hemos estado agregando
 Comenzamos con la noción básica de conjunto, que se suponía que conocías (de manera informal, si no rigurosa).
 Introdujimos el concepto de subconjuntos abiertos de nuestro conjunto; esto equivale a introducir una topología y promover el conjunto a un espacio topológico.
 Luego, al exigir que cada conjunto abierto pareciera una región de $\R^n$ (con $n$ igual para cada conjunto) y que los gráficos de coordenadas se unieran suavemente, el espacio topológico se convirtió en una variedad.
-Una variedad es a la vez una estructura muy flexible y poderosa, y viene equipada naturalmente con un paquete tangente, paquetes tensoriales de varios rangos, la capacidad de tomar derivadas exteriores, etc.
+Una variedad es a la vez una estructura muy flexible y poderosa, y viene equipada naturalmente con un haz tangente, haces tensoriales de varios rangos, la capacidad de tomar derivadas exteriores, etc.
 Luego procedimos a poner una métrica en la variedad, lo que resultó en una variedad con métrica (o, a veces, ``variedad de Riemann'').
 Independientemente de la métrica que encontremos, podríamos introducir una conexión, lo que nos permitiría tomar derivadas covariantes.
 Sin embargo, una vez que tenemos una métrica, automáticamente hay una conexión única compatible con métricas sin torsión.
@@ -2661,9 +2649,9 @@ Esta es la {\bf ecuación geodésica}, otra que debes memorizar.
 Podemos ver fácilmente que reproduce la noción habitual de líneas rectas si los coeficientes de conexión son los símbolos de Christoffel en el espacio euclidiano; en ese caso podemos elegir coordenadas cartesianas en las que $\Gamma^\mu_{\rho\sigma}=0$, y la ecuación geodésica es simplemente $d^2x^\mu/d\lambda^2=0$, que es la ecuación de una línea recta.
 
 Eso fue vergonzosamente simple; Pasemos al caso menos trivial de la definición de distancia más corta.
-Como sabemos, existen varias sutilezas involucradas en la definición de distancia en un Espacio-Tiempo lorentziano; para caminos nulos la distancia es cero, para caminos temporales es más conveniente usar el tiempo adecuado, etc.
+Como sabemos, existen varias sutilezas involucradas en la definición de distancia en un Espacio-Tiempo lorentziano; para caminos nulos la distancia es cero, para caminos temporales es más conveniente usar el tiempo propio, etc.
 Entonces, en nombre de la simplicidad, hagamos el cálculo solo para una ruta temporal: la ecuación resultante resultará buena para cualquier ruta, por lo que no estamos perdiendo ninguna generalidad.
-Por lo tanto consideramos funcional el tiempo adecuado,
+Por lo tanto consideramos funcional el tiempo propio,
 \begin{equation}
 \tau = \int \left(-g_\mn {{dx^\mu}\over{d\lambda}}
 {{dx^\nu}\over{d\lambda}}\right)^{1/2}\, d\lambda\ ,\label{3.48}
@@ -2672,7 +2660,7 @@ donde la integral está sobre el camino.
 Para buscar caminos de menor distancia, haremos el tratamiento habitual de cálculo de variaciones para buscar extremos de este funcional.
 (De hecho, resultarán ser curvas de {\it máximo} tiempo propio.)
 
-Queremos considerar el cambio en el tiempo adecuado bajo variaciones infinitesimales del camino,
+Queremos considerar el cambio en el tiempo propio bajo variaciones infinitesimales del camino,
 \begin{align}
 x^\mu &\rightarrow x^\mu+\delta x^\mu \notag \\
 g_\mn &\rightarrow g_\mn + \delta x^\sigma\partial_\sigma g_\mn
@@ -2705,7 +2693,7 @@ Dado que se supone que $\delta x^\sigma$ es pequeño, podemos expandir la raíz 
 - g_\mn {{dx^\mu}\over{d\lambda}}{{d(\delta x^\nu)}\over{d\lambda}}
 \right)\, d\lambda\,.\label{3.51}
 \end{equation}
-Es útil en este punto cambiar la parametrización de nuestra curva de $\lambda$, que era arbitraria, al tiempo adecuado $\tau$, usando
+Es útil en este punto cambiar la parametrización de nuestra curva de $\lambda$, que era arbitraria, al tiempo propio $\tau$, usando
 \begin{equation}
 d\lambda = \left(-g_\mn {{dx^\mu}\over{d\lambda}}
 {{dx^\nu}\over{d\lambda}}\right)^{-1/2}\, d\tau\,.\label{3.52}
@@ -2757,14 +2745,14 @@ También es posible introducir fuerzas añadiendo términos al lado derecho; de 
 Hablaremos de esto más adelante, pero en realidad tu suposición sería correcta.
 
 Habiendo derivado audazmente estas expresiones, deberíamos decir algunas palabras más cuidadosas sobre la parametrización de una trayectoria geodésica.
-Cuando presentamos la ecuación geodésica como el requisito de que el vector tangente sea transportado paralelo, (3.47), parametrizamos nuestra trayectoria con algún parámetro $\lambda$, mientras que cuando encontramos la fórmula (3.56) para el extremo del intervalo espacio-temporal terminamos con una parametrización muy específica, el momento adecuado.
+Cuando presentamos la ecuación geodésica como el requisito de que el vector tangente sea transportado paralelo, (3.47), parametrizamos nuestra trayectoria con algún parámetro $\lambda$, mientras que cuando encontramos la fórmula (3.56) para el extremo del intervalo espacio-temporal terminamos con una parametrización muy específica, el momentum propio.
 Por supuesto, de la forma de (3.56) está claro que una transformación
 \begin{equation}
 \tau \rightarrow \lambda = a\tau +b \ ,\label{3.58}
 \end{equation}
 para algunas constantes $a$ y $b$, deja la ecuación invariante.
-Cualquier parámetro relacionado con el tiempo adecuado de esta manera se denomina {\bf parámetro afín} y es tan bueno como el tiempo adecuado para parametrizar una geodésica.
-Lo que estaba oculto en nuestra derivación de (3.47) era que \textit{la exigencia de que el vector tangente se transporte paralelo en realidad limita la parametrización de la curva}, específicamente una relacionada con el tiempo adecuado mediante (3.58).
+Cualquier parámetro relacionado con el tiempo propio de esta manera se denomina {\bf parámetro afín} y es tan bueno como el tiempo propio para parametrizar una geodésica.
+Lo que estaba oculto en nuestra derivación de (3.47) era que \textit{la exigencia de que el vector tangente se transporte paralelo en realidad limita la parametrización de la curva}, específicamente una relacionada con el tiempo propio mediante (3.58).
 En otras palabras, si comienzas en algún punto y con alguna dirección inicial, y luego construyes una curva comenzando a caminar en esa dirección y manteniendo tu vector tangente paralelo transportado, no solo definirás una ruta en la variedad sino también (hasta a transformaciones lineales) definen el parámetro a lo largo de la ruta.
 
 Por supuesto, no hay nada que le impida utilizar cualquier otra parametrización que desee, pero entonces (3.47) no quedará satisfecho.
@@ -2780,7 +2768,7 @@ Por el contrario, si se satisface (3.59) a lo largo de una curva, siempre se pue
 Una propiedad importante de las geodésicas en un Espacio-Tiempo con métrica de Lorentz es que el carácter (temporal/nulo/espacial) de la geodésica (en relación con una conexión compatible con métricas) nunca cambia.
 Esto se debe simplemente a que el transporte paralelo conserva los productos internos y el carácter está determinado por el producto interno del vector tangente consigo mismo.
 Esta es la razón por la que fuimos consistentes al considerar trayectorias puramente temporales cuando derivamos (3.56); para trayectorias espaciales habríamos obtenido la misma ecuación, ya que la única diferencia es un signo menos general en la respuesta final.
-También hay geodésicas nulas, que satisfacen la misma ecuación, excepto que el tiempo adecuado no puede usarse como parámetro (existirá algún conjunto de parámetros permitidos, relacionados entre sí mediante transformaciones lineales).
+También hay geodésicas nulas, que satisfacen la misma ecuación, excepto que el tiempo propio no puede usarse como parámetro (existirá algún conjunto de parámetros permitidos, relacionados entre sí mediante transformaciones lineales).
 Este hecho se puede derivar del simple requisito de que el vector tangente se transporte en paralelo, o extendiendo la variación de (3.48) para incluir todos los caminos no espaciales.
 
 Expliquemos ahora la observación anterior de que las geodésicas temporales son máximos del tiempo propio.
@@ -2794,8 +2782,8 @@ Para hacer esto todo lo que tenemos que hacer es considerar curvas nulas ``irreg
 
 \noindent
 A medida que aumentamos el número de esquinas agudas, la curva nula se acerca cada vez más a la curva temporal sin dejar de tener una longitud de trayectoria cero.
-Por lo tanto, las geodésicas temporales no pueden ser curvas de tiempo propio mínimo, ya que siempre están infinitamente cercanas a curvas de tiempo propio cero; de hecho, maximizan el tiempo adecuado.
-(Así es como puedes recordar qué gemelo en la paradoja de los gemelos envejece más: el que se queda en casa está básicamente en una geodésica y, por lo tanto, experimenta un tiempo más adecuado).
+Por lo tanto, las geodésicas temporales no pueden ser curvas de tiempo propio mínimo, ya que siempre están infinitamente cercanas a curvas de tiempo propio cero; de hecho, maximizan el tiempo propio.
+(Así es como puedes recordar qué gemelo en la paradoja de los gemelos envejece más: el que se queda en casa está básicamente en una geodésica y, por lo tanto, experimenta un mayor tiempo propio).
 Por supuesto, incluso esto es ser un poco arrogante; de hecho, cada vez que decimos ``maximizar'' o ``minimizar'' debemos agregar el modificador ``localmente''. A menudo ocurre que entre dos puntos de una variedad hay más de una geodésica.
 Por ejemplo, en $S^2$ podemos dibujar un círculo máximo que pase por dos puntos cualesquiera e imaginar viajar entre ellos en el sentido corto o en el sentido más largo.
 Uno de ellos es obviamente más largo que el otro, aunque ambos son puntos estacionarios de la longitud funcional.
@@ -3629,12 +3617,12 @@ En ambas situaciones, los campos de interés viven en espacios vectoriales asign
 En la geometría de Riemann, los espacios vectoriales incluyen el espacio tangente, el espacio cotangente y los espacios tensoriales superiores construidos a partir de estos.
 Por otra parte, en las teorías de calibre nos ocupamos de los espacios vectoriales ``internos''.
 La distinción es que el espacio tangente y sus parientes están íntimamente asociados con la variedad misma y se definieron naturalmente una vez que se estableció la variedad; un espacio vectorial interno puede ser de cualquier dimensión que queramos y debe definirse como una adición independiente a la variedad.
-En la jerga matemática, la unión de la variedad base con los espacios vectoriales internos (definidos en cada punto) es un {\bf haz de fibras}, y cada copia del espacio vectorial se llama ``fibra'' (en perfecto acuerdo con nuestra definición del paquete tangente).
+En la jerga matemática, la unión de la variedad base con los espacios vectoriales internos (definidos en cada punto) es un {\bf haz de fibras}, y cada copia del espacio vectorial se llama ``fibra'' (en perfecto acuerdo con nuestra definición del haz tangente).
 
 Además de la variedad base (para nosotros, el Espacio-Tiempo) y las fibras, el otro ingrediente importante en la definición de un haz de fibras es el ``grupo estructural'', un grupo de Lie que actúa sobre las fibras para describir cómo se cosen entre sí. parches de coordenadas superpuestas.
-Sin entrar en detalles, el grupo estructural del paquete tangente en un Espacio-Tiempo de cuatro dimensiones es generalmente GL$(4,\R)$, el grupo de matrices reales invertibles $4\times 4$; si tenemos una métrica lorentziana, esta puede reducirse al grupo de Lorentz SO$(3,1)$.
-Ahora imagine que introducimos un espacio vectorial tridimensional interno y cosimos las fibras con rotaciones ordinarias; el grupo de estructura de este nuevo paquete es entonces SO$(3)$.
-Un campo que se encuentra en este paquete podría denominarse $\phi^A(x^\mu)$, donde $A$ va del uno al tres; es un vector de tres (uno interno, no relacionado con el Espacio-Tiempo) para cada punto de la variedad.
+Sin entrar en detalles, el grupo estructural del haz tangente en un Espacio-Tiempo de cuatro dimensiones es generalmente GL$(4,\R)$, el grupo de matrices reales invertibles $4\times 4$; si tenemos una métrica lorentziana, esta puede reducirse al grupo de Lorentz SO$(3,1)$.
+Ahora imagine que introducimos un espacio vectorial tridimensional interno y cosimos las fibras con rotaciones ordinarias; el grupo de estructura de este nuevo haz es entonces SO$(3)$.
+Un campo que se encuentra en este haz podría denominarse $\phi^A(x^\mu)$, donde $A$ va del uno al tres; es un vector de tres (uno interno, no relacionado con el Espacio-Tiempo) para cada punto de la variedad.
 Tenemos libertad para elegir la base de las fibras de la forma que queramos; esto significa que las ``cantidades físicas'' deben dejarse invariantes bajo transformaciones locales SO(3) como
 \begin{equation}
 \phi^A(x^\mu)\rightarrow \phi^{A'}(x^\mu)=
@@ -3674,10 +3662,10 @@ Podemos transportar cosas en paralelo a lo largo de caminos, y existe una constr
 Podríamos continuar con el desarrollo de la relación entre el fibrado tangente y los fibrados vectoriales internos, pero el tiempo apremia y tenemos otros asuntos que resolver.
 En lugar de ello, terminemos destacando la importante diferencia entre las dos construcciones.
 La diferencia surge del hecho de que el haz tangente está estrechamente relacionado con la variedad base, mientras que otros haces de fibras se añaden después.
-Tiene sentido decir que un vector en el espacio tangente en $p$ ``apunta a lo largo de un camino'' que pasa por $p$; pero esto no tiene sentido para un paquete de vectores interno.
+Tiene sentido decir que un vector en el espacio tangente en $p$ ``apunta a lo largo de un camino'' que pasa por $p$; pero esto no tiene sentido para un haz de vectores interno.
 Por lo tanto, no existe un análogo de la base de coordenadas para un espacio interno; las derivadas parciales a lo largo de las curvas no tienen nada que ver con los vectores internos.
 De ello se deduce, a su vez, que no hay nada como los vielbeins, que relacionan bases ortonormales con bases coordinadas.
-El tensor de torsión, en particular, sólo se define para una conexión en el haz tangente, no para ninguna conexión de teoría de calibre; se puede considerar como la derivada exterior covariante del vielbein, y tal construcción no está disponible en un paquete interno.
+El tensor de torsión, en particular, sólo se define para una conexión en el haz tangente, no para ninguna conexión de teoría de calibre; se puede considerar como la derivada exterior covariante del vielbein, y tal construcción no está disponible en un haz interno.
 Se debe apreciar la relación entre los distintos usos de la noción de conexión, sin dejarse llevar.
 
 
@@ -3889,7 +3877,7 @@ Por tanto, en la Relatividad General, las partículas libres se mueven a lo larg
 En lo que respecta a las partículas libres, hemos argumentado que la curvatura del Espacio-Tiempo es necesaria para describir la gravedad; todavía no hemos demostrado que sea suficiente.
 Para hacerlo, podemos mostrar cómo los resultados habituales de la gravedad newtoniana encajan en el panorama.
 Definimos el ``límite newtoniano'' mediante tres requisitos: las partículas se mueven lentamente (con respecto a la velocidad de la luz), el campo gravitacional es débil (puede considerarse una perturbación del espacio plano) y el campo también es estático. (sin cambios con el tiempo).
-Veamos qué efecto tienen estos supuestos en la ecuación geodésica, tomando el tiempo adecuado $\tau$ como parámetro afín.
+Veamos qué efecto tienen estos supuestos en la ecuación geodésica, tomando el tiempo propio $\tau$ como parámetro afín.
 ``Moverse lentamente'' significa que
 \begin{equation}
 {{dx^i}\over{d\tau}}<<{{dt}\over{d\tau}}\ ,\label{4.10}
@@ -4089,7 +4077,7 @@ R_{\mn} = \kappa T_{\mn}\ ,\label{4.37}
 para alguna constante $\kappa$.
 De hecho, Einstein sugirió esta ecuación en un instante dado.
 Lamentablemente, existe un problema con la conservación de la energía.
-Según el Principio de Equivalencia, la afirmación de la conservación del momentum de energía en el Espacio-Tiempo curvo debería ser
+Según el Principio de Equivalencia, la afirmación de la conservación de la energía y el momentum en el Espacio-Tiempo curvo debería ser
 \begin{equation}
 \nabla^\mu T_{\mn} =0\ ,\label{4.38}
 \end{equation}
@@ -4181,7 +4169,7 @@ Con la normalización fijada en comparación con el límite newtoniano, podemos 
 \begin{equation}
 R_{\mn} -{1\over 2}R g_\mn = 8\pi G T_{\mn}\,.\label{4.52}
 \end{equation}
-Estos nos dicen cómo reacciona la curvatura del Espacio-Tiempo ante la presencia de energía-momentum.
+Estos nos dicen cómo reacciona la curvatura del Espacio-Tiempo ante la presencia de la energía y el momentum.
 Como habrás oído, Einstein pensaba que el lado izquierdo era bonito y geométrico, mientras que el lado derecho era algo menos convincente.
 
 Las ecuaciones de Einstein pueden considerarse como ecuaciones diferenciales de segundo orden para el campo tensorial métrico $g_\mn$.
@@ -4380,8 +4368,7 @@ La propiedad más común que se exige de $T_\mn$ es que represente densidades de
 En un marco localmente inercial, este requisito se puede expresar como $\rho = T_{00} \geq 0$.
 Para convertir esto en una declaración independiente de las coordenadas, pedimos que
 \begin{equation}
-T_\mn V^\mu V^\nu \geq 0\ ,\qquad{\rm ~for~all~timelike~vectors~}
-V^\mu\,.\label{4.72}
+T_\mn V^\mu V^\nu \geq 0\ ,\qquad\text{para todos los vectores tipo Tiempo }\, V^\mu\,.\label{4.72}
 \end{equation}
 Esto se conoce como {\bf Condición de energía débil} o WEC.
 Parece un requisito bastante razonable, y muchos de los teoremas importantes sobre soluciones a la Relatividad General (como los teoremas de singularidad de Hawking y Penrose) se basan en esta condición o en algo muy cercano a ella.
@@ -4435,7 +4422,7 @@ S = \int d^nx \g (R + \alpha_1 R^2 + \alpha_2 R_\mn R^\mn
 donde los $\alpha$ son constantes de acoplamiento y los puntos representan cualquier otro escalar que podamos hacer a partir del tensor de curvatura, sus contracciones y sus derivadas.
 Tradicionalmente, tales términos han sido descuidados por el argumento razonable de que simplemente complican una teoría que ya es estéticamente agradable y empíricamente exitosa.
 Sin embargo, hay al menos tres razones más importantes para este abandono.
-En primer lugar, como veremos más adelante, las ecuaciones de Einstein conducen a un problema de valor inicial bien planteado para la métrica, en el que las ``coordenadas'' y los ``momentos'' especificados en un momento inicial pueden utilizarse para predecir la evolución futura.
+En primer lugar, como veremos más adelante, las ecuaciones de Einstein conducen a un problema de valor inicial bien planteado para la métrica, en el que las ``coordenadas'' y los ``momentos'' especificados en un tiempo inicial pueden utilizarse para predecir la evolución futura.
 Con términos de derivadas más altas, necesitaríamos no sólo esos datos, sino también un cierto número de derivadas de los momentos.
 En segundo lugar, la principal fuente de insatisfacción con la Relatividad General por parte de los físicos de partículas es que no puede renormalizarse (hasta donde sabemos), y los lagrangianos con derivadas superiores tienden generalmente a hacer que las teorías sean menos renormalizables en lugar de más.
 En tercer lugar, por los mismos argumentos que utilizamos anteriormente al hablar de las limitaciones del principio de equivalencia, los términos extra en (4.76) deberían estar suprimidos (por potencias de la masa de Planck a alguna potencia) en relación con el término habitual de Hilbert, y por lo tanto no se esperaría que tuvieran ninguna importancia práctica para el mundo de baja energía.
@@ -4456,7 +4443,7 @@ Por ejemplo,
 \begin{equation}
 {{m_\pi^3}\over{H_0}}\sim {{cG}\over{\hbar^2}}\,.\label{4.78}
 \end{equation}
-Si asumimos por el momento que esta relación no es simplemente un accidente, nos enfrentamos al problema de que la ``constante'' de Hubble en realidad cambia con el tiempo (en la mayoría de los modelos cosmológicos), mientras que las otras cantidades convencionalmente no lo hacen.
+Si asumimos provisionalmente que esta relación no es simplemente un accidente, nos enfrentamos al problema de que la ``constante'' de Hubble en realidad cambia con el tiempo (en la mayoría de los modelos cosmológicos), mientras que las otras cantidades convencionalmente no lo hacen.
 Por tanto, Dirac propuso que, de hecho, $G$ variaba con el tiempo, de tal manera que se mantuviera (4.78); Satisfacer esta propuesta fue la motivación de Brans y Dicke.
 Hoy en día, las pruebas experimentales de la Relatividad General son lo suficientemente precisas como para que podamos afirmar con confianza que, si la teoría de Brans-Dicke es correcta, el cambio predicho en $G$ a lo largo del espacio y del tiempo debe ser muy pequeño, mucho más lento que el necesario para satisfacer la hipótesis de Dirac.
 (Consulte Weinberg para obtener detalles sobre la teoría de Brans-Dicke y las pruebas experimentales).
@@ -4469,7 +4456,7 @@ Sin entrar en detalles, la razón básica por la que tales teorías no reciben m
 Por lo tanto, realmente no perdemos ninguna generalidad al considerar teorías de conexiones libres de torsión (que conducen a la Relatividad General) más cualquier número de campos tensoriales, que podemos nombrar como queramos.
 
 Teniendo en cuenta la posibilidad de que una de estas alternativas (o, más probablemente, algo en lo que aún no hayamos pensado) se realice realmente en la naturaleza, durante el resto del curso trabajaremos bajo el supuesto de que la Relatividad General, que se basa en las ecuaciones de Einstein o la acción de Hilbert, es la teoría correcta y determine sus consecuencias.
-Estas consecuencias, por supuesto, están constituidas por las soluciones de las ecuaciones de Einstein para diversas fuentes de energía y momento, y el comportamiento de las partículas de prueba en estas soluciones.
+Estas consecuencias, por supuesto, están constituidas por las soluciones de las ecuaciones de Einstein para diversas fuentes de energía y momentum, y el comportamiento de las partículas de prueba en estas soluciones.
 Antes de considerar soluciones específicas en detalle, veamos de manera más abstracta el problema del valor inicial en la Relatividad General.
 
 En la mecánica newtoniana clásica, el comportamiento de una sola partícula está, por supuesto, gobernado por ${\bf f} = m{\bf a}$.
@@ -4483,7 +4470,7 @@ m{{d^2x^i}\over{dt^2}}=-\p{i}\Phi\,.\label{4.79}
 {{dx^i}\over{dt}}  &=  {1\over m}p^i\,. \label{4.80}
 \end{align}
 El problema de valores iniciales es simplemente el procedimiento de especificar un ``estado'' $(x^i,p^i)$ que sirve como condición de frontera con la cual (4.80) puede resolverse de manera única.
-Puede pensar que (4.80) le permite, una vez que se le dan las coordenadas y los momentos en algún momento $t$, evolucionarlos hacia adelante una cantidad infinitesimal hasta un tiempo $t+\delta t$ e iterar este procedimiento para obtener la solución completa.
+Puede pensar que (4.80) le permite, una vez que se le dan las coordenadas y los momentos en algún instante $t$, evolucionarlos hacia adelante una cantidad infinitesimal hasta un tiempo $t+\delta t$ e iterar este procedimiento para obtener la solución completa.
 
 Nos gustaría formular el problema análogo en la Relatividad General.
 Las ecuaciones de Einstein $G_\mn = 8\pi G T_\mn$ son, por supuesto, covariantes; no señalan una noción preferida de ``tiempo'' a través del cual un Estado puede evolucionar.
@@ -5066,7 +5053,7 @@ Establecer $\delta S_M=0$ implica entonces
 {\delta g_\mn}}\right)\ ,\label{5.37}
 \end{align}
 donde podemos eliminar la simetrización de $\nabla_{(\mu} V_{\nu)}$ ya que $\delta S_M/\delta g_\mn$ ya es simétrico.
-Exigiendo que (5.37) se cumpla para difeomorfismos generados por campos vectoriales arbitrarios $V^\mu$, y utilizando la definición (4.70) del tensor de energía-momento, obtenemos precisamente la ley de conservación del momento de energía,
+Exigiendo que (5.37) se cumpla para difeomorfismos generados por campos vectoriales arbitrarios $V^\mu$, y utilizando la definición (4.70) del tensor de energía-momentum, obtenemos precisamente la ley de conservación del momentum de energía,
 \begin{equation}
 \nabla_\mu T^\mn=0\,.\label{5.38}
 \end{equation}
@@ -5109,7 +5096,7 @@ U^\nu\nabla_\nu(V_\mu U^\mu) &=  U^\nu U^\mu \nabla_\nu V_\mu
 donde el primer término desaparece de la ecuación de Killing y el segundo del hecho de que $x^\mu(\lambda)$ es una geodésica.
 Por tanto, la cantidad $V_\mu U^\mu$ se conserva a lo largo de la línea mundial de la partícula.
 Esto se puede entender físicamente: por definición, la métrica no cambia en la dirección del vector Killing.
-Por lo tanto, en términos generales, una partícula libre no sentirá ninguna ``fuerza'' en esta dirección y, en consecuencia, la componente de su momento en esa dirección se conservará.
+Por lo tanto, en términos generales, una partícula libre no sentirá ninguna ``fuerza'' en esta dirección y, en consecuencia, la componente de su momentum en esa dirección se conservará.
 
 Hace tiempo nos referimos al concepto de espacio de máxima simetría, sin ofrecer una definición rigurosa.
 La definición rigurosa es que un {\bf espacio máximamente simétrico} es aquel que posee el mayor número posible de vectores Killing, que en una variedad $n$-dimensional es $n(n+1)/2$.
@@ -5224,8 +5211,8 @@ De acuerdo con nuestra interpretación de la teoría linealizada como una que de
 \end{equation}
 Te ahorraré los detalles.
 
-La ecuación de campo linealizada es, por supuesto, $G_\mn=8\pi GT_\mn$, donde $G_\mn$ viene dada por (6.8) y $T_\mn$ es el tensor de energía-momento, calculado en orden cero en $h_\mn$.
-No incluimos correcciones de orden superior al tensor de energía-momento porque la cantidad de energía y momento debe ser pequeña para que se aplique el límite del campo débil.
+La ecuación de campo linealizada es, por supuesto, $G_\mn=8\pi GT_\mn$, donde $G_\mn$ viene dada por (6.8) y $T_\mn$ es el tensor de energía-momentum, calculado en orden cero en $h_\mn$.
+No incluimos correcciones de orden superior al tensor de energía-momentum porque la cantidad de energía y momentum debe ser pequeña para que se aplique el límite del campo débil.
 En otras palabras, el orden más bajo que no desaparece en $T_\mn$ es automáticamente del mismo orden de magnitud que la perturbación.
 Observe que la ley de conservación al orden más bajo es simplemente $\p\mu T^\mn=0$.
 La mayoría de las veces nos ocuparemos de las ecuaciones del vacío, que, como siempre, son simplemente $R_\mn=0$, donde $R_\mn$ está dada por (6.6).
@@ -5293,7 +5280,7 @@ La última igualdad se desprende de nuestro cálculo previo de la derivada de Li
 Los difeomorfismos infinitesimales $\phi_\epsilon$ proporcionan una representación diferente de la misma situación física, manteniendo nuestro requisito de que la perturbación sea pequeña.
 Por lo tanto, el resultado (6.12) nos dice qué tipo de perturbaciones métricas denotan espacios-tiempos físicamente equivalentes: aquellos relacionados entre sí por $2\epsilon\partial_{(\mu}\xi_{\nu)}$, para algún vector $\xi^\mu$.
 La invariancia de nuestra teoría bajo tales transformaciones es análoga a la invariancia de calibre tradicional del electromagnetismo bajo $A_\mu \rightarrow A_\mu + \p\mu\lambda$.
-(La analogía es diferente de la analogía anterior que trazamos con el electromagnetismo, relacionando las transformaciones locales de Lorentz en el formalismo del marco ortonormal con cambios de base en un paquete de vectores interno).
+(La analogía es diferente de la analogía anterior que trazamos con el electromagnetismo, relacionando las transformaciones locales de Lorentz en el formalismo del marco ortonormal con cambios de base en un haz vectorial interno).
 En el electromagnetismo, la invariancia se produce porque la intensidad del campo $F_\mn = \p\mu A_\nu - \p\nu A_\mu$ no se modifica mediante transformaciones de calibre; de manera similar, encontramos que la transformación (6.13) cambia el tensor de Riemann linealizado en
 \begin{align}
 \delta R_{\mn\rho\sigma}  &=
@@ -5366,8 +5353,8 @@ Recuerde que anteriormente encontramos que las ecuaciones de Einstein predijeron
 h_{00} = -2\Phi\ ,\label{6.24}
 \end{equation}
 donde $\Phi$ es el potencial newtoniano convencional, $\Phi=-GM/r$.
-Supongamos ahora que el tensor de energía-momento de nuestra fuente está dominado por su densidad de energía en reposo $\rho=T_{00}$.
-(Esta suposición generalmente no es necesaria en el límite del campo débil, pero ciertamente será válida para un planeta o una estrella, que es lo que nos gustaría considerar por el momento).
+Supongamos ahora que el tensor de energía-momentum de nuestra fuente está dominado por su densidad de energía en reposo $\rho=T_{00}$.
+(Esta suposición generalmente no es necesaria en el límite del campo débil, pero ciertamente será válida para un planeta o una estrella, que es lo que nos gustaría considerar provisionalmente).
 Entonces los otros componentes de $T_\mn$ serán mucho más pequeños que $T_{00}$, y desde (6.22) lo mismo debe ser válido para $\bar h_\mn$.
 Si $\bar h_{00}$ es mucho mayor que $\bar h_{ij}$, tendremos
 \begin{equation}
@@ -5417,7 +5404,7 @@ k_\sigma k^\sigma=0\,.\label{6.32}
 \end{equation}
 La onda plana (6.30) es, por tanto, una solución de las ecuaciones linealizadas si el vector de onda es nulo; esto se traduce libremente en la afirmación de que las ondas gravitacionales se propagan a la velocidad de la luz.
 La componente temporal del vector de onda a menudo se denomina {\bf frecuencia} de la onda, y escribimos $k^\sigma = (\omega, k^1,k^2,k^3)$.
-(De manera más general, un observador que se mueve con cuatro velocidades $U^\mu$ observaría que la onda tiene una frecuencia $\omega=-k_\mu U^\mu$.)
+(De manera más general, un observador que se mueve con cuatro-velocidad $U^\mu$ observaría que la onda tiene una frecuencia $\omega=-k_\mu U^\mu$.)
 Entonces la condición de que el vector de onda sea nulo se convierte en
 \begin{equation}
 \omega^2 = \delta_{ij}k^i k^j\,.\label{6.33}
@@ -5577,7 +5564,7 @@ Para tener una idea de los efectos físicos debidos a las ondas gravitacionales,
 Ciertamente es insuficiente resolver la trayectoria de una sola partícula, ya que eso sólo nos informaría sobre los valores de las coordenadas a lo largo de la línea universal.
 (De hecho, para cualquier partícula individual podemos encontrar coordenadas transversales sin traza en las que la partícula parece estacionaria de primer orden en $h_\mn$.)
 Para obtener una medida independiente de las coordenadas de los efectos de la onda, consideramos el movimiento relativo de las partículas cercanas, como lo describe la ecuación de desviación geodésica.
-Si consideramos algunas partículas cercanas con cuatro velocidades descritas por un único campo vectorial $U^\mu(x)$ y un vector de separación $S^\mu$, tenemos
+Si consideramos algunas partículas cercanas con cuatro-velocidad descritas por un único campo vectorial $U^\mu(x)$ y un vector de separación $S^\mu$, tenemos
 \begin{equation}
 {{D^2}\over{d\tau^2}}S^\mu = R^\mu{}_{\nu\rho\sigma}
 U^\nu U^\rho S^\sigma\,.\label{6.58}
@@ -5726,7 +5713,7 @@ El término ``tiempo retardado'' se utiliza para referirse a la cantidad
 \begin{equation}
 t_r = t-|\x-\y |\,.\label{6.75}
 \end{equation}
-La interpretación de (6.74) debe ser clara: la perturbación en el campo gravitacional en $(t,\x)$ es una suma de las influencias de las fuentes de energía y momento en el punto $(t_r,\x-\y)$ del cono de luz pasado.
+La interpretación de (6.74) debe ser clara: la perturbación en el campo gravitacional en $(t,\x)$ es una suma de las influencias de las fuentes de energía y momentum en el punto $(t_r,\x-\y)$ del cono de luz pasado.
 
 \begin{figure}[h]
 \centering
@@ -5805,12 +5792,12 @@ i\omega \int y^i \widetilde T^{0j}~d^3y  \notag \\
 \label{6.82}
 \end{align}
 La segunda línea está justificada ya que sabemos que el lado izquierdo es simétrico en $i$ y $j$, mientras que la tercera y cuarta líneas son simplemente repeticiones de integración inversa por partes y conservación de $T^\mn$.
-Es convencional definir el {\bf tensor de momento cuadrupolar} de la densidad de energía de la fuente,
+Es convencional definir el {\bf tensor de momentum cuadrupolar} de la densidad de energía de la fuente,
 \begin{equation}
 q_{ij}(t) = 3\int y^i y^j T^{00}(t,\y)~d^3y\ ,\label{6.83}
 \end{equation}
 un tensor constante en cada superficie de tiempo constante.
-En términos de la transformada de Fourier del momento cuadrupolar, nuestra solución toma la forma compacta
+En términos de la transformada de Fourier del momentum cuadrupolar, nuestra solución toma la forma compacta
 \begin{equation}
 \widetilde\bh_{ij}(\omega,\x) = -{{2G\omega^2}\over 3}
 {{e^{i\omega R}}\over R} \widetilde q_{ij}(\omega)\ ,\label{6.84}
@@ -5825,13 +5812,13 @@ o, transformándose nuevamente a $t$,
 \end{align}
 donde como antes $t_r = t-R$.
 
-La onda gravitacional producida por un objeto aislado no relativista es, por tanto, proporcional a la segunda derivada del momento cuadrupolar de la densidad de energía en el punto donde el cono de luz pasado del observador cruza la fuente.
-Por el contrario, la principal contribución a la radiación electromagnética proviene del momento cambiante {\it dipolo} de la densidad de carga.
+La onda gravitacional producida por un objeto aislado no relativista es, por tanto, proporcional a la segunda derivada del momentum cuadrupolar de la densidad de energía en el punto donde el cono de luz pasado del observador cruza la fuente.
+Por el contrario, la principal contribución a la radiación electromagnética proviene del momentum cambiante {\it dipolo} de la densidad de carga.
 La diferencia se remonta a la naturaleza universal de la gravitación.
-Un momento dipolar cambiante corresponde al movimiento del centro de densidad: densidad de carga en el caso del electromagnetismo, densidad de energía en el caso de la gravitación.
+Un momentum dipolar cambiante corresponde al movimiento del centro de densidad: densidad de carga en el caso del electromagnetismo, densidad de energía en el caso de la gravitación.
 Si bien no hay nada que impida que el centro de carga de un objeto oscile, la oscilación del centro de masa de un sistema aislado viola la conservación del momentum.
 (Puedes sacudir un cuerpo hacia arriba y hacia abajo, pero tú y la tierra se sacuden ligeramente en la dirección opuesta para compensar).
-El momento cuadripolar, que mide la forma del sistema, es generalmente más pequeño que el momento dipolar, y por esta razón (así como por el débil acoplamiento de la materia con la gravedad) la radiación gravitacional suele ser mucho más débil que la radiación electromagnética.
+El momentum cuadripolar, que mide la forma del sistema, es generalmente más pequeño que el momentum dipolar, y por esta razón (así como por el débil acoplamiento de la materia con la gravedad) la radiación gravitacional suele ser mucho más débil que la radiación electromagnética.
 
 Siempre es educativo tomar una solución general y aplicarla a un caso específico de interés.
 Un caso de auténtico interés es la radiación gravitacional emitida por una estrella binaria (dos estrellas en órbita una alrededor de la otra).
@@ -5875,7 +5862,7 @@ T^{00}(t,\x) = M\delta(x^3)\left[\delta(x^1-r\cos\Omega t)
 \delta(x^2-r\sin\Omega t) + \delta(x^1+r\cos\Omega t)
 \delta(x^2+r\sin\Omega t)\right]\,.\label{6.92}
 \end{equation}
-La profusión de funciones delta nos permite integrar esto directamente para obtener el momento cuadrupolar de (6.83):
+La profusión de funciones delta nos permite integrar esto directamente para obtener el momentum cuadrupolar de (6.83):
 \begin{align}
 q_{11}  &=  6Mr^2\cos^2\Omega t = 3Mr^2(1+\cos2\Omega t) \notag \\
 q_{22}  &=  6Mr^2\sin^2\Omega t = 3Mr^2(1-\cos2\Omega t) \notag \\
@@ -5895,22 +5882,22 @@ Los componentes restantes de $\bh_\mn$ podrían derivarse de exigir que se cumpl
 Es natural en este punto hablar de la energía emitida mediante radiación gravitacional.
 Sin embargo, tal discusión se ve inmediatamente plagada de problemas, tanto técnicos como filosóficos.
 Como hemos mencionado antes, no existe una verdadera medida local de la energía en el campo gravitacional.
-Por supuesto, en el límite del campo débil, donde pensamos que la gravitación se describe mediante un tensor simétrico que se propaga sobre una métrica de fondo fija, podríamos esperar derivar un tensor de energía-momento para las fluctuaciones $h_\mn$, tal como lo haríamos para electromagnetismo o cualquier otra teoría de campo.
+Por supuesto, en el límite del campo débil, donde pensamos que la gravitación se describe mediante un tensor simétrico que se propaga sobre una métrica de fondo fija, podríamos esperar derivar un tensor de energía-momentum para las fluctuaciones $h_\mn$, tal como lo haríamos para electromagnetismo o cualquier otra teoría de campo.
 Hasta cierto punto esto es posible, pero todavía existen dificultades.
-Como resultado de estas dificultades, existen varias propuestas diferentes en la literatura sobre lo que deberíamos utilizar como tensor de energía-momento para la gravitación en el límite del campo débil; Todos ellos son diferentes, pero en su mayor parte dan las mismas respuestas a preguntas físicamente bien planteadas, como la tasa de energía emitida por un sistema binario.
+Como resultado de estas dificultades, existen varias propuestas diferentes en la literatura sobre lo que deberíamos utilizar como tensor de energía-momentum para la gravitación en el límite del campo débil; Todos ellos son diferentes, pero en su mayor parte dan las mismas respuestas a preguntas físicamente bien planteadas, como la tasa de energía emitida por un sistema binario.
 
-A nivel técnico, las dificultades empiezan a surgir cuando consideramos qué forma debe adoptar el tensor de energía-momento.
-Anteriormente mencionamos los tensores de energía-momento para el electromagnetismo y la teoría de campos escalares, y ambos compartían una característica importante: eran cuadráticos en los campos relevantes.
+A nivel técnico, las dificultades empiezan a surgir cuando consideramos qué forma debe adoptar el tensor de energía-momentum.
+Anteriormente mencionamos los tensores de energía-momentum para el electromagnetismo y la teoría de campos escalares, y ambos compartían una característica importante: eran cuadráticos en los campos relevantes.
 Por hipótesis, nuestro enfoque para el límite del campo débil ha sido mantener únicamente los términos que son lineales en la perturbación métrica.
 Por lo tanto, para realizar un seguimiento de la energía transportada por las ondas gravitacionales, tendremos que extender nuestros cálculos al menos al segundo orden en $h_\mn$.
 De hecho, hemos estado haciendo un poco de trampa todo el tiempo.
 Al discutir los efectos de las ondas gravitacionales en las partículas de prueba, y la generación de ondas por un sistema binario, hemos estado utilizando el hecho de que las partículas de prueba se mueven a lo largo de geodésicas.
-Pero como sabemos, esto se deriva de la conservación covariante del momento de energía, $\nabla_\mu T^\mn=0$.
+Pero como sabemos, esto se deriva de la conservación covariante del momentum de energía, $\nabla_\mu T^\mn=0$.
 Sin embargo, en el orden en el que hemos estado trabajando, en realidad tenemos $\p\mu T^\mn=0$, lo que implicaría que las partículas de prueba se mueven en línea recta en la métrica de fondo plano.
 Este es un síntoma de la inconsistencia fundamental del límite del campo débil.
 En la práctica, lo mejor que se puede hacer es resolver las ecuaciones de campo débil en algún orden apropiado y luego justificar a posteriori la validez de la solución.
 
-Teniendo estas cuestiones en mente, consideremos las ecuaciones de Einstein (en el vacío) de segundo orden y veamos cómo se puede interpretar el resultado en términos de un tensor de energía-momento para el campo gravitacional.
+Teniendo estas cuestiones en mente, consideremos las ecuaciones de Einstein (en el vacío) de segundo orden y veamos cómo se puede interpretar el resultado en términos de un tensor de energía-momentum para el campo gravitacional.
 Si escribimos la métrica como $g_\mn = \eta_\mn + h_\mn$, entonces en el primer orden tenemos
 \begin{equation}
 G^{(1)}_\mn[\eta+h] = 0\ ,\label{6.95}
@@ -5947,13 +5934,13 @@ simplemente definiendo
 \begin{equation}
 t_\mn = -{1\over {8\pi G}}G^{(2)}_\mn[\eta+h]\,.\label{6.100}
 \end{equation}
-Por supuesto, la notación pretende sugerir que pensemos en $t_\mn$ como un tensor de energía-momento, específicamente el del campo gravitacional (al menos en el régimen de campo débil).
+Por supuesto, la notación pretende sugerir que pensemos en $t_\mn$ como un tensor de energía-momentum, específicamente el del campo gravitacional (al menos en el régimen de campo débil).
 Para que esta afirmación parezca plausible, tenga en cuenta que la identidad de Bianchi para $G^{(1)}_\mn[\eta+h^{(2)}]$ implica que $t_\mn$ se conserva en el sentido de espacio plano,
 \begin{equation}
 \p\mu t^\mn =0\,.\label{6.101}
 \end{equation}
 
-Desafortunadamente, existen algunas limitaciones en nuestra interpretación de $t_\mn$ como tensor de energía-momento.
+Desafortunadamente, existen algunas limitaciones en nuestra interpretación de $t_\mn$ como tensor de energía-momentum.
 Por supuesto, no es un tensor en absoluto en la teoría completa, pero lo dejamos de lado por hipótesis.
 Más importante aún, no es invariante bajo transformaciones de calibre (difeomorfismos infinitesimales), como se puede verificar mediante cálculo directo.
 Sin embargo, podemos construir cantidades globales que sean invariantes bajo ciertos tipos especiales de transformaciones de calibre (básicamente, aquellas que desaparecen con suficiente rapidez en el infinito; ver Wald).
@@ -5967,7 +5954,7 @@ y la energía total irradiada hasta el infinito,
 \end{equation}
 Aquí, la integral se toma sobre una superficie temporal $S$ formada por dos esferas espaciales en el infinito y en algún intervalo de tiempo, y $n^\mu$ es un vector unitario espacial normal a $S$.
 
-Evaluar estas fórmulas en términos del momento cuadrupolar de una fuente radiante implica un cálculo largo que no reproduciremos aquí.
+Evaluar estas fórmulas en términos del momentum cuadrupolar de una fuente radiante implica un cálculo largo que no reproduciremos aquí.
 Sin más, la cantidad de energía radiada se puede escribir
 \begin{equation}
 \Delta E = \int P ~dt\ ,\label{6.104}
@@ -5977,7 +5964,7 @@ donde la potencia $P$ está dada por
 P = {{G}\over {45}}\left[{{d^3 Q^{ij}}\over{dt^3}}
 {{d^3 Q_{ij}}\over{dt^3}}\right]_{t_r}\ ,\label{6.105}
 \end{equation}
-y aquí $Q_{ij}$ es la parte sin rastro del momento cuadrupolar,
+y aquí $Q_{ij}$ es la parte sin rastro del momentum cuadrupolar,
 \begin{equation}
 Q_{ij} = q_{ij}-{1\over 3}\delta_{ij} \delta^{kl}
 q_{kl}\,.\label{6.106}
@@ -6388,7 +6375,7 @@ y
 \end{equation}
 No parece haber muchas esperanzas de resolver simplemente este conjunto de ecuaciones acopladas mediante inspección.
 Afortunadamente, nuestra tarea se simplifica enormemente gracias al alto grado de simetría de la métrica de Schwarzschild.
-Sabemos que hay cuatro vectores Killing: tres para la simetría esférica y uno para las traslaciones temporales.
+Sabemos que hay cuatro-vectores Killing: tres para la simetría esférica y uno para las traslaciones temporales.
 Cada uno de estos conducirá a una constante del movimiento de una partícula libre; si $K^\mu$ es un vector de muerte, sabemos que
 \begin{equation}
 K_\mu {{dx^\mu}\over{d\lambda}} = {\rm constant}\,.\label{7.38}
@@ -6405,22 +6392,22 @@ También nos ocuparemos de las geodésicas espaciales (aunque no corresponden a 
 
 En lugar de escribir inmediatamente expresiones explícitas para las cuatro cantidades conservadas asociadas con los vectores Killing, pensemos en lo que nos dicen.
 Observe que las simetrías que representan también están presentes en el Espacio-Tiempo plano, donde las cantidades conservadas a las que conducen son muy familiares.
-La invariancia bajo traslaciones temporales conduce a la conservación de la energía, mientras que la invariancia bajo rotaciones espaciales conduce a la conservación de los tres componentes del momento angular.
+La invariancia bajo traslaciones temporales conduce a la conservación de la energía, mientras que la invariancia bajo rotaciones espaciales conduce a la conservación de los tres componentes del momentum angular.
 En esencia, lo mismo se aplica a la métrica de Schwarzschild.
-Podemos pensar en el momento angular como un vector de tres con una magnitud (un componente) y una dirección (dos componentes).
-La conservación de la dirección del momento angular significa que la partícula se moverá en un plano.
+Podemos pensar en el momentum angular como un vector de tres con una magnitud (un componente) y una dirección (dos componentes).
+La conservación de la dirección del momentum angular significa que la partícula se moverá en un plano.
 Podemos elegir que este sea el plano ecuatorial de nuestro sistema de coordenadas; si la partícula no está en este plano, podemos rotar coordenadas hasta que esté.
-Por tanto, los dos vectores de Killing que conducen a la conservación de la dirección del momento angular implican
+Por tanto, los dos vectores de Killing que conducen a la conservación de la dirección del momentum angular implican
 \begin{equation}
 \theta = {\pi\over 2}\,.\label{7.40}
 \end{equation}
-Los dos vectores Killing restantes corresponden a la energía y la magnitud del momento angular.
+Los dos vectores Killing restantes corresponden a la energía y la magnitud del momentum angular.
 La energía surge del vector de muerte temporal $K = \partial_t$, o
 \begin{equation}
 K_\mu = \left(-\left(1-{{2GM}\over r}\right),0,0,0\right)
 \,.\label{7.41}
 \end{equation}
-El vector Killing cuya cantidad conservada es la magnitud del momento angular es $L = \p\phi$, o
+El vector Killing cuya cantidad conservada es la magnitud del momentum angular es $L = \p\phi$, o
 \begin{equation}
 L_\mu = \left(0,0,0,r^2\sin^2\theta \right)\,.\label{7.42}
 \end{equation}
@@ -6432,7 +6419,7 @@ y
 \begin{equation}
 r^2{{d\phi}\over{d\lambda}}=L\,.\label{7.44}
 \end{equation}
-Para partículas sin masa, estos pueden considerarse como energía y momento angular; para partículas masivas son la energía y el momento angular por unidad de masa de la partícula.
+Para partículas sin masa, estos pueden considerarse como energía y momentum angular; para partículas masivas son la energía y el momentum angular por unidad de masa de la partícula.
 Tenga en cuenta que la constancia de (7.44) es el equivalente en Relatividad General de la segunda ley de Kepler (áreas iguales se barren en tiempos iguales).
 
 Juntas, estas cantidades conservadas proporcionan una manera conveniente de comprender las órbitas de las partículas en la geometría de Schwarzschild.
@@ -6475,7 +6462,7 @@ Sin embargo, podemos avanzar mucho hacia la comprensión de todas las órbitas s
 
 Un análisis similar de las órbitas en la gravedad newtoniana habría producido un resultado similar; la ecuación general (7.47) habría sido la misma, pero el potencial efectivo (7.48) no habría tenido el último término.
 (Tenga en cuenta que esta ecuación no es una serie de potencias en $1/r$, es exacta).
-En el potencial (7.48), el primer término es simplemente una constante, el segundo término corresponde exactamente al potencial gravitacional newtoniano y el tercer término es una contribución del momento angular que toma la misma forma en la gravedad newtoniana y la Relatividad General.
+En el potencial (7.48), el primer término es simplemente una constante, el segundo término corresponde exactamente al potencial gravitacional newtoniano y el tercer término es una contribución del momentum angular que toma la misma forma en la gravedad newtoniana y la Relatividad General.
 El último término, la contribución de la Relatividad General, marcará una gran diferencia, especialmente en el caso del pequeño $r$.
 
 Examinemos los tipos de órbitas posibles, como se ilustra en las figuras.
@@ -6519,7 +6506,7 @@ Dado que la diferencia reside en el término $-GML^2/r^3$, al igual que $r\right
 Pero como $r\rightarrow 0$ el potencial va a $-\infty$ en lugar de a $+\infty$ como en el caso newtoniano.
 En $r=2GM$ el potencial es siempre cero; dentro de este radio está el agujero negro, del que hablaremos más a fondo más adelante.
 Para las partículas sin masa siempre hay una barrera (excepto para $L=0$, cuyo potencial desaparece de manera idéntica), pero un fotón suficientemente energético atravesará la barrera y será arrastrado inexorablemente hacia el centro.
-(Tenga en cuenta que ``suficientemente energético'' significa ``en comparación con su momento angular''; de hecho, la frecuencia del fotón es irrelevante, sólo la dirección en la que apunta).
+(Tenga en cuenta que ``suficientemente energético'' significa ``en comparación con su momentum angular''; de hecho, la frecuencia del fotón es irrelevante, sólo la dirección en la que apunta).
 En la parte superior de la barrera hay órbitas circulares inestables.
 Para $\epsilon=0$, $\gamma=1$, podemos resolver fácilmente (7.49) para obtener
 \begin{equation}
@@ -6538,7 +6525,7 @@ Esto significa que un fotón puede orbitar para siempre en un círculo con este 
 \includegraphics[width=0.7\linewidth]{imagenes/seven07.pdf}
 \end{figure}
 
-Para las partículas masivas también existen diferentes regímenes dependiendo del momento angular.
+Para las partículas masivas también existen diferentes regímenes dependiendo del momentum angular.
 Las órbitas circulares están en
 \begin{equation}
 r_c = {{L^2\pm \sqrt{L^4 - 12 G^2 M^2 L^2}}\over{2GM}}\,.\label{7.52}
@@ -6620,7 +6607,7 @@ Esta separación en el tiempo coordinado no cambia a lo largo de las trayectoria
 &=  \left({{1-{{2GM}/{r_2}}}\over{1-{{2GM}/{r_1}}}}\right)^{1/2}
 \Delta\tau_1\,.\label{7.60}
 \end{align}
-Dado que estos intervalos $\Delta\tau_i$ miden el tiempo adecuado entre dos crestas de una onda electromagnética, las frecuencias observadas estarán relacionadas por
+Dado que estos intervalos $\Delta\tau_i$ miden el tiempo propio entre dos crestas de una onda electromagnética, las frecuencias observadas estarán relacionadas por
 \begin{align}
 {{\omega_2}\over{\omega_1}} &=  {{\Delta\tau_1}\over
 {\Delta\tau_2}} \notag \\
@@ -6647,7 +6634,7 @@ Sin embargo, aún queda mucho camino por recorrer antes de su lanzamiento, y la 
 
 Ahora sabemos algo sobre el comportamiento de las geodésicas fuera del radio problemático $r=2GM$, que es el régimen de interés para el sistema solar y la mayoría de otras situaciones astrofísicas.
 A continuación pasaremos al estudio de los objetos descritos por la solución de Schwarzschild incluso en radios menores que $2GM$: agujeros negros.
-(Utilizaremos el término ``agujero negro'' por el momento, aunque no hemos introducido un significado preciso para tal objeto.)
+(Utilizaremos el término ``agujero negro'' provisionalmente, aunque no hemos introducido un significado preciso para tal objeto.)
 
 Una forma de entender una geometría es explorar su estructura causal, definida por los conos de luz.
 Consideramos por tanto curvas nulas radiales, aquellas para las que $\theta$ y $\phi$ son constantes y $ds^2=0$:
@@ -6679,11 +6666,11 @@ Si nos quedáramos afuera mientras un intrépido relativista general observacion
 \includegraphics[width=0.6\linewidth]{imagenes/seven10.pdf}
 \end{figure}
 Esto debería quedar claro en las imágenes y lo confirma nuestro cálculo de $\Delta\tau_1/\Delta\tau_2$ cuando analizamos el desplazamiento al rojo gravitacional (7,61).
-A medida que los astronautas que caen se acercan a $r=2GM$, cualquier intervalo fijo $\Delta\tau_1$ de su tiempo adecuado corresponde a un intervalo cada vez más largo $\Delta\tau_2$ desde nuestro punto de vista.
+A medida que los astronautas que caen se acercan a $r=2GM$, cualquier intervalo fijo $\Delta\tau_1$ de su tiempo propio corresponde a un intervalo cada vez más largo $\Delta\tau_2$ desde nuestro punto de vista.
 Esto continúa para siempre; nunca veríamos al astronauta cruzar $r=2GM$, solo los veríamos moverse cada vez más lentamente (y ponerse cada vez más rojos, casi como si les avergonzara haber hecho algo tan estúpido como sumergirse en un agujero negro).
 
 El hecho de que nunca veamos a los astronautas llegar a $r=2GM$ es una afirmación significativa, pero el hecho de que su trayectoria en el avión $t$-$r$ nunca llegue allí, no lo es.
-Depende en gran medida de nuestro sistema de coordenadas, y nos gustaría hacer una pregunta más independiente de las coordenadas (por ejemplo, ¿alcanzan los astronautas este radio en una cantidad finita de su tiempo adecuado?).
+Depende en gran medida de nuestro sistema de coordenadas, y nos gustaría hacer una pregunta más independiente de las coordenadas (por ejemplo, ¿alcanzan los astronautas este radio en una cantidad finita de su tiempo propio?).
 La mejor manera de hacerlo es cambiar las coordenadas a un sistema que se comporte mejor en $r=2GM$.
 Existe un conjunto de tales coordenadas, que ahora nos proponemos encontrar.
 No hay forma de ``derivar'' una transformación de coordenadas, por supuesto, simplemente decimos cuáles son las nuevas coordenadas y agregamos las fórmulas.
@@ -6817,7 +6804,7 @@ ds^2 =-{{16 G^3M^3}\over{r}}e^{-r/2GM}( d\,u'  d\,v'+  d\,v'  d\,u')
 Finalmente, la naturaleza no singular de $r=2GM$ se vuelve completamente manifiesta; de esta forma ninguno de los coeficientes métricos se comporta de manera especial en el horizonte de sucesos.
 
 Tanto $u'$ como $v'$ son coordenadas nulas, en el sentido de que sus derivadas parciales $\partial/\partial u'$ y $\partial/\partial v'$ son vectores nulos.
-No hay nada de malo en esto, ya que la colección de cuatro vectores de derivadas parciales (dos nulos y dos espaciales) en este sistema sirve como una base perfectamente buena para el espacio tangente.
+No hay nada de malo en esto, ya que la colección de cuatro-vectores de derivadas parciales (dos nulos y dos espaciales) en este sistema sirve como una base perfectamente buena para el espacio tangente.
 Sin embargo, nos sentimos algo más cómodos trabajando en un sistema donde una coordenada es temporal y el resto espacial.
 Por lo tanto definimos
 \begin{align}
@@ -6898,14 +6885,12 @@ De hecho, cada camino dirigido al futuro en la región II termina chocando con l
 Vale la pena recalcar esto; no sólo no puedes escapar de regreso a la región I, sino que ni siquiera puedes evitar moverte en la dirección decreciente $r$, ya que esta es simplemente la dirección temporal.
 (Esto podría haberse visto en nuestro sistema de coordenadas original; para $r<2GM$, $t$ se vuelve espacial y $r$ se vuelve temporal).
 Por lo tanto, no puedes dejar de avanzar hacia la singularidad, como tampoco puedes dejar de envejecer.
-Dado que el tiempo adecuado se maximiza a lo largo de una geodésica, vivirás más tiempo si no luchas, sino que simplemente te relajas a medida que te acercas a la singularidad.
+Dado que el tiempo propio se maximiza a lo largo de una geodésica, vivirás más tiempo si no luchas, sino que simplemente te relajas a medida que te acercas a la singularidad.
 No es que tengas mucho tiempo para relajarte.
-% (
-Tampoco que el viaje vaya a ser muy relajante; A medida que te acercas a la singularidad, las fuerzas de marea se vuelven infinitas.
+(Tampoco que el viaje vaya a ser muy relajante; A medida que te acercas a la singularidad, las fuerzas de marea se vuelven infinitas.
 A medida que caes hacia la singularidad, tus pies y tu cabeza se separarán entre sí, mientras que tu torso quedará reducido a una delgadez infinitesimal.
 La espantosa desaparición de un astrofísico que cae en un agujero negro se detalla en Misner, Thorne y Wheeler, sección 32.6.
-Tenga en cuenta que utilizan marcos ortonormales [aunque eso no hace que el viaje sea más agradable].
-% )
+Tenga en cuenta que utilizan marcos ortonormales [aunque eso no hace que el viaje sea más agradable].)
 
 Las Regiones III y IV podrían resultar algo inesperadas.
 La región III no es más que el reverso temporal de la región II, una parte del espaciotiempo desde la que las cosas pueden escapar hacia nosotros, mientras que nosotros nunca podemos llegar hasta allí.
@@ -7036,7 +7021,7 @@ Los rangos son ahora
 \end{align}
 Para obtener la métrica, use
 \begin{equation}
- d\,U = {{ d\,u}\over{1+u^2}}\ ,%\qquad  d\,V = {{ d\,v}\over{1+v^2}}\ ,
+ d\,U = {{ d\,u}\over{1+u^2}}\ ,%% \qquad  d\,V = {{ d\,v}\over{1+v^2}}\ ,
 \label{7.93}
 \end{equation}
 y
@@ -7097,33 +7082,32 @@ Todo el $\R\times S^3$ se puede dibujar como un cilindro, en el que cada círcul
 \begin{figure}[h]
 \centering
 \includegraphics[width=0.4\linewidth]{imagenes/seven22.pdf}
+\caption{La región sombreada representa el espacio de Minkowski. Tenga en cuenta que cada punto $(\eta,\chi)$ de este cilindro es la mitad de una doble esfera, donde la otra mitad es el punto $(\eta,-\chi)$. }
 \end{figure}
 
 \noindent
-La región sombreada representa el espacio de Minkowski.
-Tenga en cuenta que cada punto $(\eta,\chi)$ de este cilindro es la mitad de una doble esfera, donde la otra mitad es el punto $(\eta,-\chi)$.
-Podemos desenrollar la región sombreada para representar el espacio de Minkowski como un triángulo, como se muestra en la figura.
+La región sombreada representa el espacio de Minkowski. Tenga en cuenta que cada punto $(\eta,\chi)$ de este cilindro es la mitad de una doble esfera, donde la otra mitad es el punto $(\eta,-\chi)$.
 
-\begin{figure}[ht]
+Podemos desenrollar la región sombreada para representar el espacio de Minkowski como un triángulo, como se muestra en la figura.
+El es el {\bf Diagrama de Penrose}. Cada punto representa dos esferas.
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.6\linewidth]{imagenes/seven23.pdf}
+\caption{El es el {\bf Diagrama de Penrose}. Cada punto representa dos esferas.}
 \end{figure}
-El es el {\bf diagrama de Penrose}.
-Cada punto representa dos esferas.
-
 De hecho, el espacio de Minkowski es sólo el {\it interior} del diagrama anterior (incluido $\chi=0$); los límites no son parte del Espacio-Tiempo original.
 Juntos se les conoce como {\bf infinito conforme}.
 La estructura del diagrama de Penrose nos permite subdividir el infinito conforme en algunas regiones diferentes:
 \begin{equation*}
 \begin{aligned}
-i^+  &=  {\rm future~timelike~infinity~} (\eta=\pi\ ,\ \chi=0) \\
-i^0  &=  {\rm spatial~infinity~} (\eta=0\ ,\ \chi=\pi) \\
-i^-  &=  {\rm past~timelike~infinity~} (\eta=-\pi\ ,\ \chi=0) \\
-{\cal I}^+  &=  {\rm future~null~infinity~} (\eta=\pi-\chi\ ,\ 0<\chi<\pi) \\
-{\cal I}^-  &=  {\rm past~null~infinity~} (\eta=-\pi+\chi\ ,\ 0<\chi<\pi)
+i^+  &=  \text{ Futuro Infinito en forma de Tiempo } (\eta=\pi\ ,\ \chi=0) \\
+i^0  &=  \text{ Infinito Espacial } (\eta=0\ ,\ \chi=\pi) \\
+i^-  &=  \text{ Pasado como infinito en el tiempo } (\eta=-\pi\ ,\ \chi=0) \\
+{\cal I}^+  &=  \text{ Futuro nulo infinito } (\eta=\pi-\chi\ ,\ 0<\chi<\pi) \\
+{\cal I}^-  &=  \text{ Pasado infinito nulo } (\eta=-\pi+\chi\ ,\ 0<\chi<\pi)
 \end{aligned}
 \end{equation*}
-(${\cal I}^+$ y ${\cal I}^-$ se pronuncian como ``scri-plus'' y ``scri-minus'', respectivamente.)
+(${\cal I}^+$ y ${\cal I}^-$ se pronuncian como ``Scri-plus o Scri-más'' y ``Scri-minus o Scri menos'', respectivamente.)
 Tenga en cuenta que $i^+$, $i^0$ y $i^-$ son en realidad {\it puntos}, ya que $\chi=0$ y $\chi=\pi$ son los polos norte y sur de $S^3$.
 Mientras tanto, ${\cal I}^+$ y ${\cal I}^-$ son en realidad superficies nulas, con la topología de $\R\times S^2$.
 
@@ -7183,7 +7167,7 @@ Además, el diagrama de Penrose para una estrella que colapsa y forma un agujero
 
 Una vez más, los diagramas de Penrose para estos espacio-tiempos realmente no nos dicen nada que no sepamos ya; su utilidad se hará evidente cuando consideremos los agujeros negros en términos más generales.
 En principio podría haber una gran variedad de tipos de agujeros negros, dependiendo del proceso mediante el cual se formaron.
-Sin embargo, sorprendentemente, este no es el caso; No importa cómo se forme un agujero negro, se estabiliza (con bastante rapidez) en un estado que se caracteriza únicamente por la masa, la carga y el momento angular.
+Sin embargo, sorprendentemente, este no es el caso; No importa cómo se forme un agujero negro, se estabiliza (con bastante rapidez) en un estado que se caracteriza únicamente por la masa, la carga y el momentum angular.
 Esta propiedad, que debe demostrarse individualmente para los distintos tipos de campos que uno podría imaginar que intervienen en la construcción del agujero, a menudo se expresa como ``los agujeros negros no tienen pelo''. Se puede demostrar, por ejemplo, que un agujero que se forma a partir de un colapso inicialmente no homogéneo, ``se sacude'' cualquier grumos emitiendo radiación gravitacional.
 Este es un ejemplo de un ``teorema sin pelo''. Si estamos interesados en la forma del agujero negro después de que se ha asentado, sólo necesitamos preocuparnos de los agujeros cargados y giratorios.
 En ambos casos existen soluciones exactas para la métrica, que podemos examinar de cerca.
@@ -7233,8 +7217,8 @@ En este caso todavía está presente la simetría esférica total del problema; 
 ds^2 = -e^{2\alpha(r,t)} d\,t^2 + e^{2\beta(r,t)} d\,r^2 +
 r^2 d\Omega^2\,.\label{7.106}
 \end{equation}
-Ahora, sin embargo, ya no estamos en el vacío, ya que el agujero tendrá un campo electromagnético distinto de cero, que a su vez actúa como una fuente de energía-momento.
-El tensor de energía-momento para el electromagnetismo viene dado por
+Ahora, sin embargo, ya no estamos en el vacío, ya que el agujero tendrá un campo electromagnético distinto de cero, que a su vez actúa como una fuente de energía-momentum.
+El tensor de energía-momentum para el electromagnetismo viene dado por
 \begin{equation}
 T_\mn = {1\over{4\pi}}(F_{\mu\rho}F_\nu{}^\rho
 -{1\over 4}g_\mn F_{\rho\sigma}F^{\rho\sigma})\ ,\label{7.107}
@@ -7255,7 +7239,7 @@ Las ecuaciones de campo en este caso son tanto las ecuaciones de Einstein como l
 g^\mn \nabla_\mu F_{\nu\sigma}  &=  0 \notag \\
 \nabla_{[\mu}F_{\nu\rho]}  &=  0\,.\label{7.109}
 \end{align}
-Los dos conjuntos están acoplados, ya que el tensor de intensidad del campo electromagnético entra en las ecuaciones de Einstein a través del tensor de energía-momento, mientras que la métrica entra explícitamente en las ecuaciones de Maxwell.
+Los dos conjuntos están acoplados, ya que el tensor de intensidad del campo electromagnético entra en las ecuaciones de Einstein a través del tensor de energía-momentum, mientras que la métrica entra explícitamente en las ecuaciones de Maxwell.
 
 Sin embargo, las dificultades no son insuperables y un procedimiento similar al que seguimos para el caso de la aspiradora conduce a una solución también para el caso acusado.
 No describiremos los pasos explícitamente, sino que simplemente citaremos la respuesta final.
@@ -7352,7 +7336,7 @@ Esta pequeña historia corresponde al diagrama de Penrose adjunto, que por supue
 ¿Cuánto de esto es ciencia, a diferencia de ciencia ficción?
 Probablemente no mucho.
 Si piensa en el mundo visto desde un observador dentro del agujero negro que está a punto de cruzar el horizonte de sucesos en $r_-$, notará que puede mirar hacia atrás en el tiempo para ver la historia completa del fenómeno externo (asintóticamente plano). universo, al menos visto desde el agujero negro.
-Pero ven esta historia (infinitamente larga) en una cantidad finita de su tiempo adecuado; por lo tanto, cualquier señal que les llegue cuando se acercan a $r_-$ está infinitamente desplazada hacia el azul.
+Pero ven esta historia (infinitamente larga) en una cantidad finita de su tiempo propio; por lo tanto, cualquier señal que les llegue cuando se acercan a $r_-$ está infinitamente desplazada hacia el azul.
 Por lo tanto, es razonable creer (aunque no conozco ninguna prueba) que cualquier perturbación no esféricamente simétrica que llegue a un agujero negro de Reissner-Nordstr{\o}m perturbará violentamente la geometría que hemos descrito.
 Es difícil decir cómo será la geometría real, pero no hay muy buenas razones para creer que deba contener un número infinito de regiones asintóticamente planas conectadas entre sí a través de varios agujeros de gusano.
 
@@ -7560,12 +7544,12 @@ Directamente de (7.132) encontramos que
 \end{equation}
 
 Ahora pasemos al movimiento geodésico, que sabemos se simplificará al considerar las cantidades conservadas asociadas con los vectores Killing $\zeta^\mu=\p{t}$ y $\eta^\mu=\p\phi$.
-Para los propósitos que nos ocupan podemos restringir nuestra atención a las partículas masivas, para las cuales podemos trabajar con los cuatro momentos.
+Para los propósitos que nos ocupan podemos restringir nuestra atención a las partículas masivas, para las cuales podemos trabajar con los cuatro-momentos.
 \begin{equation}
 p^\mu = m {{dx^\mu}\over{d\tau}}\ ,\label{7.135}
 \end{equation}
 donde $m$ es la masa en reposo de la partícula.
-Entonces podemos tomar como nuestras dos cantidades conservadas la energía real y el momento angular de la partícula,
+Entonces podemos tomar como nuestras dos cantidades conservadas la energía real y el momentum angular de la partícula,
 \begin{equation}
 E=-\zeta_\mu p^\mu = m\left(1-{{2GMr}\over {\rho^2}}\right)
 {{dt}\over{d\tau}}
@@ -7577,7 +7561,7 @@ L=\eta_\mu p^\mu=-{{2mGMar}\over{\rho^2}}\sin^2\theta\, {{dt}\over{d\tau}}
 +{{m(r^2+a^2)^2 - m\Delta a^2\sin^2\theta}\over{\rho^2}}\sin^2\theta\,
 {{d\phi}\over{d\tau}}\,.\label{7.137}
 \end{equation}
-(Estos difieren de nuestras definiciones anteriores para las cantidades conservadas, donde $E$ y $L$ se tomaron como la energía y el momento angular {\it por unidad de masa}.
+(Estos difieren de nuestras definiciones anteriores para las cantidades conservadas, donde $E$ y $L$ se tomaron como la energía y el momentum angular {\it por unidad de masa}.
 Se conservan de cualquier manera, por supuesto).
 
 El signo menos en la definición de $E$ está ahí porque en el infinito tanto $\zeta^\mu$ como $p^\mu$ son temporales, por lo que su producto interno es negativo, pero queremos que la energía sea positiva.
@@ -7589,7 +7573,7 @@ El grado en que esto nos molesta mejora un poco al comprender que \textit{todas}
 
 Aún así, este descubrimiento conduce a una forma de extraer energía de un agujero negro en rotación; el método se conoce como {\bf proceso de Penrose}.
 La idea es simple; Comenzando desde fuera de la ergosfera, te armas con una gran roca y saltas hacia el agujero negro.
-Si llamamos al cuatro momento del sistema (tú + roca) $p^{(0)\mu}$, entonces la energía $E^{(0)}=-\zeta_\mu p^{(0)\mu}$ es ciertamente positiva y se conserva a medida que avanzas a lo largo de tu geodésica.
+Si llamamos al cuatro-momentum del sistema (tú + roca) $p^{(0)\mu}$, entonces la energía $E^{(0)}=-\zeta_\mu p^{(0)\mu}$ es ciertamente positiva y se conserva a medida que avanzas a lo largo de tu geodésica.
 Una vez que entras en la ergosfera, lanzas la roca con todas tus fuerzas, de una forma muy específica.
 Si llamamos a tu momentum $p^{(1)\mu}$ y al de la roca $p^{(2)\mu}$, entonces en el instante en que la lanzas tenemos conservación del momentum tal como en la Relatividad Especial:
 \begin{equation}
@@ -7613,7 +7597,7 @@ E^{(1)}>E^{(0)}\,.\label{7.141}
 Por lo tanto, has salido con más energía de la que entraste.
 
 No existe nada parecido a un almuerzo gratis; la energía que obtuviste vino de algún lugar, y ese lugar es el agujero negro.
-De hecho, el proceso de Penrose extrae energía del agujero negro en rotación disminuyendo su momento angular; Tienes que lanzar la piedra en contra de la rotación del agujero para que el truco funcione.
+De hecho, el proceso de Penrose extrae energía del agujero negro en rotación disminuyendo su momentum angular; Tienes que lanzar la piedra en contra de la rotación del agujero para que el truco funcione.
 Para ver esto con mayor precisión, defina un nuevo vector Killing.
 \begin{equation}
 \chi^\mu = \zeta^\mu + \Omega_H\eta^\mu\,.\label{7.142}
@@ -7628,18 +7612,18 @@ Al conectar las definiciones de $E$ y $L$, vemos que esta condición es equivale
 \begin{equation}
 L^{(2)} < \frac{E^{(2)}}{\Omega_H} \,.\label{7.144}
 \end{equation}
-Como hemos dispuesto que $E^{(2)}$ sea negativo y $\Omega_H$ es positivo, vemos que la partícula debe tener un momento angular negativo: se mueve en contra de la rotación del agujero.
-Una vez que has escapado de la ergosfera y la roca ha caído dentro del horizonte de sucesos, la masa y el momento angular del agujero son los que solían ser más las contribuciones negativas de la roca:
+Como hemos dispuesto que $E^{(2)}$ sea negativo y $\Omega_H$ es positivo, vemos que la partícula debe tener un momentum angular negativo: se mueve en contra de la rotación del agujero.
+Una vez que has escapado de la ergosfera y la roca ha caído dentro del horizonte de sucesos, la masa y el momentum angular del agujero son los que solían ser más las contribuciones negativas de la roca:
 \begin{align}
 \delta M  &=  E^{(2)} \notag \\  \delta J  &=  L^{(2)}.
 \label{7.145}
 \end{align}
-Aquí hemos introducido la notación $J$ para el momento angular del agujero negro; esta dado por
+Aquí hemos introducido la notación $J$ para el momentum angular del agujero negro; esta dado por
 \begin{equation}
 J=Ma\,.\label{7.146}
 \end{equation}
 No justificaremos esto, pero puedes buscar una explicación en Wald.
-Entonces (7.144) se convierte en un límite de cuánto se puede disminuir el momento angular:
+Entonces (7.144) se convierte en un límite de cuánto se puede disminuir el momentum angular:
 \begin{equation}
 \delta J < \frac{\delta M}{\Omega_H}\,.
 \label{7.147}
@@ -7757,7 +7741,7 @@ ds^2 = -dt^2 + a^2(t)\gamma_{ij}(u) d\,u^i d\,u^j\,.\label{8.1}
 \end{equation}
 Aquí $t$ es la coordenada temporal y $(u^1, u^2, u^3)$ son las coordenadas en $\Sigma$; $\gamma_{ij}$ es la métrica de máxima simetría en $\Sigma$.
 Esta fórmula es un caso especial de (7.2), que utilizamos para derivar la métrica de Schwarzschild, excepto que hemos escalado $t$ de manera que $g_{tt}=-1$.
-La función $a(t)$ se conoce como {\bf factor de escala} y nos dice ``qué tan grande'' es la porción espacial $\Sigma$ en el momento $t$.
+La función $a(t)$ se conoce como {\bf factor de escala} y nos dice ``qué tan grande'' es la porción espacial $\Sigma$ en el tiempo $t$.
 Las coordenadas utilizadas aquí, en las que la métrica está libre de términos cruzados $ d\,t\, d\,u^i$ y los componentes espaciales son proporcionales a una única función de $t$, se conocen como {\bf coordenadas comoving}, y un observador que permanece en constante $u^i$ también se denomina ``comomovimiento''.
 Sólo un observador en movimiento pensará que el universo parece isotrópico; de hecho, en la Tierra no nos movemos del todo y, como resultado, vemos una anisotropía dipolar en el fondo cósmico de microondas como resultado del efecto Doppler convencional.
 
@@ -7859,17 +7843,17 @@ R = {{6}\over{a^2}}(a\ddot a+ \dot a^2 +k)\,.\label{8.14}
 El universo no está vacío, por lo que no nos interesan las soluciones en vacío de las ecuaciones de Einstein.
 Elegiremos modelar la materia y la energía del universo mediante un fluido perfecto.
 Hablamos de los fluidos perfectos en la Sección Uno, donde se definieron como fluidos que son isotrópicos en su estado de reposo.
-El tensor de energía-momento de un fluido perfecto se puede escribir
+El tensor de energía-momentum de un fluido perfecto se puede escribir
 \begin{equation}
 T_{\mn} = (p+\rho)U_\mu U_\nu + pg_\mn\ ,\label{8.15}
 \end{equation}
-donde $\rho$ y $p$ son la densidad de energía y la presión (respectivamente) medidas en el marco de reposo, y $U^\mu$ son las cuatro velocidades del fluido.
+donde $\rho$ y $p$ son la densidad de energía y la presión (respectivamente) medidas en el marco de reposo, y $U^\mu$ son la cuatro-velocidad del fluido.
 Está claro que, si un fluido que es isotrópico en algún marco conduce a una métrica que es isotrópica en algún marco, los dos marcos coincidirán; es decir, el fluido estará en reposo en coordenadas comoving.
-Las cuatro velocidades son entonces
+Las cuatro-velocidad son entonces
 \begin{equation}
 U^\mu = (1,0,0,0)\ ,\label{8.16}
 \end{equation}
-y el tensor de energía-momento es
+y el tensor de energía-momentum es
 \begin{equation}
 T_\mn = \left(\mqty{\rho &0&0&0 \\  0& & &  \\
 0& & g_{ij} p&  \\  0& & &  \\ }\right)\,.\label{8.17}
@@ -7916,7 +7900,7 @@ La densidad de energía en la materia cae como
 \end{equation}
 Esto se interpreta simplemente como la disminución de la densidad numérica de partículas a medida que el universo se expande.
 (Para el polvo, la densidad de energía está dominada por la energía en reposo, que es proporcional a la densidad numérica). ``Radiación'' puede usarse para describir la radiación electromagnética real o partículas masivas que se mueven a velocidades relativas suficientemente cercanas a la velocidad de luz que se vuelven indistinguibles de los fotones (al menos en lo que respecta a su ecuación de estado).
-Aunque la radiación es un fluido perfecto y por lo tanto tiene un tensor de energía-momento dado por (8.15), también sabemos que $T_\mn$ se puede expresar en términos de la intensidad del campo como
+Aunque la radiación es un fluido perfecto y por lo tanto tiene un tensor de energía-momentum dado por (8.15), también sabemos que $T_\mn$ se puede expresar en términos de la intensidad del campo como
 \begin{equation}
 T^\mn = {1\over{4\pi}}(F^{\mu\lambda}F^\nu{}_\lambda
 -{1\over 4}g^{\mu\nu} F^{\lambda\sigma}F_{\lambda\sigma})\,.
@@ -7941,13 +7925,13 @@ Así, la densidad de energía en la radiación disminuye ligeramente más rápid
 Creemos que hoy la densidad de energía del universo está dominada por la materia, con $\rho_{\rm mat}/\rho_{\rm rad}\sim10^6$.
 Sin embargo, en el pasado el universo era mucho más pequeño y la densidad de energía de la radiación habría dominado en épocas muy tempranas.
 
-Hay otra forma de energía-momento que a veces se considera: la del vacío mismo.
+Hay otra forma de energía-momentum que a veces se considera: la del vacío mismo.
 Introducir energía en el vacío equivale a introducir una constante cosmológica.
 Las ecuaciones de Einstein con una constante cosmológica son
 \begin{equation}
 G_\mn = 8\pi GT_\mn -\Lambda g_\mn \ ,\label{8.29}
 \end{equation}
-que es claramente la misma forma que las ecuaciones sin constante cosmológica pero con un tensor de energía-momento para el vacío,
+que es claramente la misma forma que las ecuaciones sin constante cosmológica pero con un tensor de energía-momentum para el vacío,
 \begin{equation}
 T^{\rm (vac)}_\mn = -{{\Lambda}\over{8\pi G}}g_\mn\,.\label{8.30}
 \end{equation}
@@ -8028,7 +8012,7 @@ Entonces, el parámetro de densidad nos dice cuál de las tres geometrías de Ro
 Determinarlo observacionalmente es un área de intensa investigación.
 
 Es posible resolver las ecuaciones de Friedmann exactamente en varios casos simples, pero suele ser más útil conocer el comportamiento cualitativo de varias posibilidades.
-Fijemos por el momento $\Lambda=0$ y consideremos el comportamiento de universos llenos de fluidos de energía positiva ($\rho > 0$) y presión no negativa ($p\geq 0$).
+Fijemos provisionalmente $\Lambda=0$ y consideremos el comportamiento de universos llenos de fluidos de energía positiva ($\rho > 0$) y presión no negativa ($p\geq 0$).
 Luego por (8.35) debemos tener $\ddot a<0$.
 Como sabemos por observaciones de galaxias distantes que el universo se está expandiendo ($\dot a>0$), esto significa que el universo se está ``desacelerando''.
 Esto es lo que deberíamos esperar, ya que la atracción gravitacional de la materia en el universo actúa en contra de la expansión.
@@ -8193,12 +8177,12 @@ Pero la gente lo está intentando.)
 Para comprender cómo podrían medirse estas cantidades, consideremos el movimiento geodésico en un universo FRW.
 Hay varios vectores Killing de tipo espacial, pero ningún vector de Killing de tipo temporal que nos dé una noción de energía conservada.
 Sin embargo, existe un tensor asesino.
-Si $U^\mu=(1,0,0,0)$ es la cuatro velocidades de los observadores comoving, entonces el tensor
+Si $U^\mu=(1,0,0,0)$ es la cuatro-velocidad de los observadores comoving, entonces el tensor
 \begin{equation}
 K_\mn = a^2(g_\mn + U_\mu U_\nu)\label{8.61}
 \end{equation}
 satisface $\nabla_{(\sigma}K_{\mn)}=0$ (como puede comprobar) y, por tanto, es un tensor Killing.
-Esto significa que si una partícula tiene cuatro velocidades $V^\mu = dx^\mu/d\lambda$, la cantidad
+Esto significa que si una partícula tiene cuatro-velocidad $V^\mu = dx^\mu/d\lambda$, la cantidad
 \begin{equation}
 K^2 = K_\mn V^\mu V^\nu = a^2[V_\mu V^\mu + (U_\mu V^\mu)^2]\label{8.62}
 \end{equation}
@@ -8306,18 +8290,10 @@ Por lo tanto, la medición de las distancias de luminosidad y los corrimientos a
 Las observaciones en sí son extremadamente difíciles y los valores de estos parámetros en el mundo real todavía son muy discutidos.
 Durante la próxima década, una variedad de nuevas estrategias y una aplicación más precisa de las antiguas podrían muy bien responder estas preguntas de una vez por todas.
 
-
-%\setlength{\bibsep}{4pt}
-
-
 \begin{thebibliography}{99}
 \addcontentsline{toc}{chapter}{Referencias}
-%\baselineskip=12pt
-%\parindent= 0pt
-%\parskip = 8pt
 
-
-\bibitem{bib001} B. F. Schutz, \textit{Un primer curso de relatividad general} (Cambridge, 1985) [*]. Este es un texto introductorio muy bonito. Especialmente útil si, por ejemplo, no tienes muy claro qué significa realmente el tensor de energía-momento.
+\bibitem{bib001} B. F. Schutz, \textit{Un primer curso de relatividad general} (Cambridge, 1985) [*]. Este es un texto introductorio muy bonito. Especialmente útil si, por ejemplo, no tienes muy claro qué significa realmente el tensor de energía-momentum.
 
 \bibitem{bib002} S. Weinberg, \textit{Gravitación y cosmología} (Wiley, 1972) [**]. Un libro realmente bueno en lo que hace, especialmente sólido en astrofísica, cosmología y pruebas experimentales. Sin embargo, adopta un enfoque no geométrico inusual para el material y no analiza los agujeros negros.
 
